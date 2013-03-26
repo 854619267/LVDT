@@ -1,0 +1,1902 @@
+A51 MACRO ASSEMBLER  Z2                                                                   10/19/2005 09:24:03 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.00b
+OBJECT MODULE PLACED IN z2.OBJ
+ASSEMBLER INVOKED BY: C:\Keil\C51\BIN\A51.EXE z2.src PR(.\z2.ls1) EP DEBUG
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     ; .\z2.SRC generated from: z2.c
+                       2     ; COMPILER INVOKED BY:
+                       3     ;        C:\Keil\C51\BIN\C51.EXE z2.c OPTIMIZE(SIZE) REGFILE(.\z2.ORC) BROWSE ORDER NOAREGS
+                              DEBUG OBJECTEXTEND SRC(.\z2.SRC)
+                       4     
+                       5     $nomod51 
+                       6     
+                       7     NAME    Z2
+                       8     
+  0080                 9     P0      DATA    080H
+  0081                10     SP      DATA    081H
+  0082                11     DPL     DATA    082H
+  0083                12     DPH     DATA    083H
+  0084                13     DPP     DATA    084H
+  0087                14     PCON    DATA    087H
+  0088                15     TCON    DATA    088H
+  0089                16     TMOD    DATA    089H
+  008A                17     TL0     DATA    08AH
+  008B                18     TL1     DATA    08BH
+  008C                19     TH0     DATA    08CH
+  008D                20     TH1     DATA    08DH
+  0090                21     P1      DATA    090H
+  0091                22     I2CADD1 DATA    091H
+  0092                23     I2CADD2 DATA    092H
+  0093                24     I2CADD3 DATA    093H
+  0098                25     SCON    DATA    098H
+  0099                26     SBUF    DATA    099H
+  009A                27     I2CDAT  DATA    09AH
+  009B                28     I2CADD  DATA    09BH
+  009D                29     T3FD    DATA    09DH
+  009E                30     T3CON   DATA    09EH
+  00A0                31     P2      DATA    0A0H
+  00A1                32     TIMECON DATA    0A1H
+  00A2                33     HTHSEC  DATA    0A2H
+  00A3                34     SEC     DATA    0A3H
+  00A4                35     MIN     DATA    0A4H
+  00A5                36     HOUR    DATA    0A5H
+  00A6                37     INTVAL  DATA    0A6H
+  00A7                38     DPCON   DATA    0A7H
+  00A8                39     IE      DATA    0A8H
+  00A9                40     IEIP2   DATA    0A9H
+  00AE                41     PWMCON  DATA    0AEH
+  00AF                42     CFG841  DATA    0AFH
+  00B0                43     P3      DATA    0B0H
+  00B1                44     PWM0L   DATA    0B1H
+  00B2                45     PWM0H   DATA    0B2H
+  00B3                46     PWM1L   DATA    0B3H
+  00B4                47     PWM1H   DATA    0B4H
+  00B7                48     SPH     DATA    0B7H
+  00B8                49     IP      DATA    0B8H
+  00B9                50     ECON    DATA    0B9H
+  00BC                51     EDATA1  DATA    0BCH
+  00BD                52     EDATA2  DATA    0BDH
+  00BE                53     EDATA3  DATA    0BEH
+  00BF                54     EDATA4  DATA    0BFH
+  00C0                55     WDCON   DATA    0C0H
+  00C2                56     CHIPID  DATA    0C2H
+  00C6                57     EADRL   DATA    0C6H
+A51 MACRO ASSEMBLER  Z2                                                                   10/19/2005 09:24:03 PAGE     2
+
+  00C7                58     EADRH   DATA    0C7H
+  00C8                59     T2CON   DATA    0C8H
+  00CA                60     RCAP2L  DATA    0CAH
+  00CB                61     RCAP2H  DATA    0CBH
+  00CC                62     TL2     DATA    0CCH
+  00CD                63     TH2     DATA    0CDH
+  00D0                64     PSW     DATA    0D0H
+  00D2                65     DMAL    DATA    0D2H
+  00D3                66     DMAH    DATA    0D3H
+  00D4                67     DMAP    DATA    0D4H
+  00D8                68     ADCCON2 DATA    0D8H
+  00D9                69     ADCDATAL        DATA    0D9H
+  00DA                70     ADCDATAH        DATA    0DAH
+  00DF                71     PSMCON  DATA    0DFH
+  00E0                72     ACC     DATA    0E0H
+  00E8                73     DCON    DATA    0E8H
+  00E8                74     I2CCON  DATA    0E8H
+  00EF                75     ADCCON1 DATA    0EFH
+  00F0                76     B       DATA    0F0H
+  00F1                77     ADCOFSL DATA    0F1H
+  00F2                78     ADCOFSH DATA    0F2H
+  00F3                79     ADCGAINL        DATA    0F3H
+  00F4                80     ADCGAINH        DATA    0F4H
+  00F5                81     ADCCON3 DATA    0F5H
+  00F7                82     SPIDAT  DATA    0F7H
+  00F8                83     SPICON  DATA    0F8H
+  00F9                84     DAC0L   DATA    0F9H
+  00FA                85     DAC0H   DATA    0FAH
+  00FB                86     DAC1L   DATA    0FBH
+  00FC                87     DAC1H   DATA    0FCH
+  00FD                88     DACCON  DATA    0FDH
+  008F                89     TF1     BIT     088H.7
+  008E                90     TR1     BIT     088H.6
+  008D                91     TF0     BIT     088H.5
+  008C                92     TR0     BIT     088H.4
+  008B                93     IE1     BIT     088H.3
+  008A                94     IT1     BIT     088H.2
+  0089                95     IE0     BIT     088H.1
+  0088                96     IT0     BIT     088H.0
+  0091                97     T2EX    BIT     090H.1
+  0090                98     T2      BIT     090H.0
+  009F                99     SM0     BIT     098H.7
+  009E               100     SM1     BIT     098H.6
+  009D               101     SM2     BIT     098H.5
+  009C               102     REN     BIT     098H.4
+  009B               103     TB8     BIT     098H.3
+  009A               104     RB8     BIT     098H.2
+  0099               105     TI      BIT     098H.1
+  0098               106     RI      BIT     098H.0
+  00AF               107     EA      BIT     0A8H.7
+  00AE               108     EADC    BIT     0A8H.6
+  00AD               109     ET2     BIT     0A8H.5
+  00AC               110     ES      BIT     0A8H.4
+  00AB               111     ET1     BIT     0A8H.3
+  00AA               112     EX1     BIT     0A8H.2
+  00A9               113     ET0     BIT     0A8H.1
+  00A8               114     EX0     BIT     0A8H.0
+  00B7               115     RD      BIT     0B0H.7
+  00B6               116     WR      BIT     0B0H.6
+  00B5               117     T1      BIT     0B0H.5
+  00B4               118     T0      BIT     0B0H.4
+  00B3               119     INT1    BIT     0B0H.3
+  00B2               120     INT0    BIT     0B0H.2
+  00B1               121     TXD     BIT     0B0H.1
+  00B0               122     RXD     BIT     0B0H.0
+  00BF               123     PSI     BIT     0B8H.7
+A51 MACRO ASSEMBLER  Z2                                                                   10/19/2005 09:24:03 PAGE     3
+
+  00BE               124     PADC    BIT     0B8H.6
+  00BD               125     PT2     BIT     0B8H.5
+  00BC               126     PS      BIT     0B8H.4
+  00BB               127     PT1     BIT     0B8H.3
+  00BA               128     PX1     BIT     0B8H.2
+  00B9               129     PT0     BIT     0B8H.1
+  00B8               130     PX0     BIT     0B8H.0
+  00C7               131     PRE3    BIT     0C0H.7
+  00C6               132     PRE2    BIT     0C0H.6
+  00C5               133     PRE1    BIT     0C0H.5
+  00C4               134     PRE0    BIT     0C0H.4
+  00C3               135     WDIR    BIT     0C0H.3
+  00C2               136     WDS     BIT     0C0H.2
+  00C1               137     WDE     BIT     0C0H.1
+  00C0               138     WDWR    BIT     0C0H.0
+  00CF               139     TF2     BIT     0C8H.7
+  00CE               140     EXF2    BIT     0C8H.6
+  00CD               141     RCLK    BIT     0C8H.5
+  00CC               142     TCLK    BIT     0C8H.4
+  00CB               143     EXEN2   BIT     0C8H.3
+  00CA               144     TR2     BIT     0C8H.2
+  00C9               145     CNT2    BIT     0C8H.1
+  00C8               146     CAP2    BIT     0C8H.0
+  00D7               147     CY      BIT     0D0H.7
+  00D6               148     AC      BIT     0D0H.6
+  00D5               149     F0      BIT     0D0H.5
+  00D4               150     RS1     BIT     0D0H.4
+  00D3               151     RS0     BIT     0D0H.3
+  00D2               152     OV      BIT     0D0H.2
+  00D1               153     F1      BIT     0D0H.1
+  00D0               154     P       BIT     0D0H.0
+  00DF               155     ADCI    BIT     0D8H.7
+  00DE               156     DMA     BIT     0D8H.6
+  00DD               157     CCONV   BIT     0D8H.5
+  00DC               158     SCONV   BIT     0D8H.4
+  00DB               159     CS3     BIT     0D8H.3
+  00DA               160     CS2     BIT     0D8H.2
+  00D9               161     CS1     BIT     0D8H.1
+  00D8               162     CS0     BIT     0D8H.0
+  00EF               163     D1      BIT     0E8H.7
+  00EE               164     D1EN    BIT     0E8H.6
+  00ED               165     D0      BIT     0E8H.5
+  00EB               166     D0EN    BIT     0E8H.3
+  00EF               167     MDO     BIT     0E8H.7
+  00EE               168     MDE     BIT     0E8H.6
+  00ED               169     MCO     BIT     0E8H.5
+  00EC               170     MDI     BIT     0E8H.4
+  00EB               171     I2CM    BIT     0E8H.3
+  00EA               172     I2CRS   BIT     0E8H.2
+  00E9               173     I2CTX   BIT     0E8H.1
+  00E8               174     I2CI    BIT     0E8H.0
+  00FF               175     ISPI    BIT     0F8H.7
+  00FE               176     WCOL    BIT     0F8H.6
+  00FD               177     SPE     BIT     0F8H.5
+  00FC               178     SPIM    BIT     0F8H.4
+  00FB               179     CPOL    BIT     0F8H.3
+  00FA               180     CPHA    BIT     0F8H.2
+  00F9               181     SPR1    BIT     0F8H.1
+  00F8               182     SPR0    BIT     0F8H.0
+                     183     ?PR?_INT0_?Z2        SEGMENT CODE 
+                     184     ?PR?_INT1_?Z2        SEGMENT CODE 
+                     185     ?PR?_TR2_?Z2         SEGMENT CODE 
+                     186     ?PR?_TR0_?Z2         SEGMENT CODE 
+                     187     ?PR?_TR1_?Z2         SEGMENT CODE 
+                     188     ?PR?_ADC_?Z2         SEGMENT CODE 
+                     189     ?PR?main?Z2          SEGMENT CODE 
+A51 MACRO ASSEMBLER  Z2                                                                   10/19/2005 09:24:03 PAGE     4
+
+                     190     ?C_INITSEG           SEGMENT CODE 
+                     191     ?XD?Z2               SEGMENT XDATA 
+                     192     ?DT?Z2               SEGMENT DATA 
+                     193     ?BI?Z2               SEGMENT BIT 
+                     194     ?ID?Z2               SEGMENT IDATA 
+                     195             EXTRN   CODE (_flash_read)
+                     196             EXTRN   DATA (?_flash_read?BYTE)
+                     197             EXTRN   CODE (_flash_write)
+                     198             EXTRN   DATA (?_flash_write?BYTE)
+                     199             EXTRN   CODE (?C?LSTXDATA)
+                     200             EXTRN   CODE (?C?LLDXDATA0)
+                     201             EXTRN   CODE (?C?LLDXDATA)
+                     202             EXTRN   CODE (?C?FPSUB)
+                     203             EXTRN   CODE (?C?FPDIV)
+                     204             EXTRN   CODE (?C?ULSHR)
+                     205             EXTRN   CODE (?C_STARTUP)
+                     206             EXTRN   CODE (?C?CHKFLOAT)
+                     207             EXTRN   CODE (?C?LSTKXDATA)
+                     208             EXTRN   CODE (?C?UIDIV)
+                     209             EXTRN   CODE (?C?FCASTI)
+                     210             EXTRN   CODE (?C?FPMUL)
+                     211             EXTRN   CODE (?C?CASTF)
+                     212             EXTRN   CODE (?C?FPADD)
+                     213             EXTRN   CODE (?C?SLCMP)
+                     214             EXTRN   CODE (?C?SLSHR)
+                     215             PUBLIC  dac_out
+                     216             PUBLIC  write_flash_niz
+                     217             PUBLIC  write_flash_verh
+                     218             PUBLIC  vx
+                     219             PUBLIC  pit
+                     220             PUBLIC  dac_peremen
+                     221             PUBLIC  dac_gotov
+                     222             PUBLIC  uart_perem
+                     223             PUBLIC  ves_razrayda
+                     224             PUBLIC  schet_uart
+                     225             PUBLIC  usred_cos_dac
+                     226             PUBLIC  usred_sin_dac
+                     227             PUBLIC  usred_cos
+                     228             PUBLIC  usred_sin
+                     229             PUBLIC  period
+                     230             PUBLIC  koef_usileniya
+                     231             PUBLIC  interval
+                     232             PUBLIC  nijniy_pridel
+                     233             PUBLIC  verhniy_pridel
+                     234             PUBLIC  period_zaderjki
+                     235             PUBLIC  period_fazi
+                     236             PUBLIC  dac_sec
+                     237             PUBLIC  schet_dac
+                     238             PUBLIC  dac_period
+                     239             PUBLIC  gotov
+                     240             PUBLIC  ust_kol_siemov
+                     241             PUBLIC  kol_siemov
+                     242             PUBLIC  delta
+                     243             PUBLIC  Cos
+                     244             PUBLIC  Sin
+                     245             PUBLIC  tim_l_0
+                     246             PUBLIC  tim_h_0
+                     247             PUBLIC  n
+                     248             PUBLIC  v
+                     249             PUBLIC  main
+                     250             PUBLIC  _ADC_
+                     251             PUBLIC  _TR1_
+                     252             PUBLIC  _TR0_
+                     253             PUBLIC  _TR2_
+                     254             PUBLIC  _INT1_
+                     255             PUBLIC  _INT0_
+A51 MACRO ASSEMBLER  Z2                                                                   10/19/2005 09:24:03 PAGE     5
+
+                     256     
+----                 257             RSEG  ?XD?Z2
+0000                 258                   v:   DS   4
+0004                 259                   n:   DS   4
+0008                 260         period_fazi:   DS   2
+000A                 261     period_zaderjki:   DS   2
+000C                 262      verhniy_pridel:   DS   4
+0010                 263       nijniy_pridel:   DS   4
+0014                 264            interval:   DS   4
+0018                 265      koef_usileniya:   DS   4
+                     266     
+----                 267             RSEG  ?DT?Z2
+0000                 268             tim_h_0:   DS   2
+0002                 269             tim_l_0:   DS   2
+0004                 270                 Sin:   DS   4
+0008                 271                 Cos:   DS   4
+000C                 272               delta:   DS   4
+0010                 273          kol_siemov:   DS   1
+0011                 274      ust_kol_siemov:   DS   1
+0012                 275              period:   DS   2
+0014                 276          schet_uart:   DS   2
+0016                 277        ves_razrayda:   DS   4
+001A                 278          uart_perem:   DS   4
+001E                 279         dac_peremen:   DS   4
+                     280     
+----                 281             RSEG  ?BI?Z2
+0000                 282               gotov:   DBIT   1
+0001                 283           dac_gotov:   DBIT   1
+0002                 284                 pit:   DBIT   1
+0003                 285                  vx:   DBIT   1
+0004                 286     write_flash_verh:   DBIT   1
+0005                 287     write_flash_niz:   DBIT   1
+0006                 288             dac_out:   DBIT   1
+                     289     
+----                 290             RSEG  ?ID?Z2
+0000                 291          dac_period:   DS   2
+0002                 292           schet_dac:   DS   2
+0004                 293             dac_sec:   DS   2
+0006                 294           usred_sin:   DS   2
+0008                 295           usred_cos:   DS   2
+000A                 296       usred_sin_dac:   DS   2
+000C                 297       usred_cos_dac:   DS   2
+                     298     
+----                 299             RSEG  ?C_INITSEG
+0000 44              300             DB      044H
+0001 0000     F      301             DW      v
+0003 00000000        302             DB      000H,000H,000H,000H     ; 0.000000
+                     303     
+0007 44              304             DB      044H
+0008 0000     F      305             DW      n
+000A 00000000        306             DB      000H,000H,000H,000H     ; 0.000000
+                     307     
+000E 02              308             DB      002H
+000F 00       F      309             DB      tim_h_0
+0010 0000            310             DW      00000H
+                     311     
+0012 02              312             DB      002H
+0013 00       F      313             DB      tim_l_0
+0014 0000            314             DW      00000H
+                     315     
+0016 04              316             DB      004H
+0017 00       F      317             DB      Sin
+0018 00000000        318             DB      000H,000H,000H,000H     ; long
+                     319     
+001C 04              320             DB      004H
+001D 00       F      321             DB      Cos
+A51 MACRO ASSEMBLER  Z2                                                                   10/19/2005 09:24:03 PAGE     6
+
+001E 00000000        322             DB      000H,000H,000H,000H     ; long
+                     323     
+0022 04              324             DB      004H
+0023 00       F      325             DB      delta
+0024 00000000        326             DB      000H,000H,000H,000H     ; 0.000000
+                     327     
+0028 01              328             DB      001H
+0029 00       F      329             DB      kol_siemov
+002A 04              330             DB      004H
+                     331     
+002B 01              332             DB      001H
+002C 00       F      333             DB      ust_kol_siemov
+002D 04              334             DB      004H
+                     335     
+002E C100     F      336             DB      0C1H, gotov + 000H      ; bit-init
+                     337     
+0030 02              338             DB      002H
+0031 00       F      339             DB      dac_period
+0032 01F4            340             DW      001F4H
+                     341     
+0034 02              342             DB      002H
+0035 00       F      343             DB      schet_dac
+0036 0001            344             DW      00001H
+                     345     
+0038 02              346             DB      002H
+0039 00       F      347             DB      dac_sec
+003A 000A            348             DW      0000AH
+                     349     
+003C 42              350             DB      042H
+003D 0000     F      351             DW      period_fazi
+003F 0064            352             DW      00064H
+                     353     
+0041 42              354             DB      042H
+0042 0000     F      355             DW      period_zaderjki
+0044 000F            356             DW      0000FH
+                     357     
+0046 44              358             DB      044H
+0047 0000     F      359             DW      verhniy_pridel
+0049 3F800000        360             DB      03FH,080H,000H,000H     ; 1.000000
+                     361     
+004D 44              362             DB      044H
+004E 0000     F      363             DW      nijniy_pridel
+0050 BF800000        364             DB      0BFH,080H,000H,000H     ; -1.000000
+                     365     
+0054 44              366             DB      044H
+0055 0000     F      367             DW      interval
+0057 00000000        368             DB      000H,000H,000H,000H     ; 0.000000
+                     369     
+005B 44              370             DB      044H
+005C 0000     F      371             DW      koef_usileniya
+005E 00000000        372             DB      000H,000H,000H,000H     ; 0.000000
+                     373     
+0062 02              374             DB      002H
+0063 00       F      375             DB      period
+0064 0000            376             DW      00000H
+                     377     
+0066 02              378             DB      002H
+0067 00       F      379             DB      usred_sin
+0068 0000            380             DW      00000H
+                     381     
+006A 02              382             DB      002H
+006B 00       F      383             DB      usred_cos
+006C 0000            384             DW      00000H
+                     385     
+006E 02              386             DB      002H
+006F 00       F      387             DB      usred_sin_dac
+A51 MACRO ASSEMBLER  Z2                                                                   10/19/2005 09:24:03 PAGE     7
+
+0070 0000            388             DW      00000H
+                     389     
+0072 02              390             DB      002H
+0073 00       F      391             DB      usred_cos_dac
+0074 0000            392             DW      00000H
+                     393     
+0076 02              394             DB      002H
+0077 00       F      395             DB      schet_uart
+0078 00FA            396             DW      000FAH
+                     397     
+007A 04              398             DB      004H
+007B 00       F      399             DB      ves_razrayda
+007C 3A200000        400             DB      03AH,020H,000H,000H     ; 0.000610
+                     401     
+0080 04              402             DB      004H
+0081 00       F      403             DB      uart_perem
+0082 00000000        404             DB      000H,000H,000H,000H     ; 0.000000
+                     405     
+0086 C100     F      406             DB      0C1H, dac_gotov + 000H  ; bit-init
+                     407     
+0088 04              408             DB      004H
+0089 00       F      409             DB      dac_peremen
+008A 00000000        410             DB      000H,000H,000H,000H     ; long
+                     411     
+008E C100     F      412             DB      0C1H, pit + 000H        ; bit-init
+                     413     
+0090 C100     F      414             DB      0C1H, vx + 000H ; bit-init
+                     415     
+0092 C100     F      416             DB      0C1H, write_flash_verh + 000H   ; bit-init
+                     417     
+0094 C100     F      418             DB      0C1H, write_flash_niz + 000H    ; bit-init
+                     419     
+0096 C100     F      420             DB      0C1H, dac_out + 080H    ; bit-init
+                     421     
+                     422     ; #include "ADUC841.h"
+                     423     ; #include <stdio.h>
+                     424     ; #include <intrins.h>
+                     425     ; #include "flash.h"                                                                       
+                                                                    // Должно быть: long data Sin=0; long data Cos=0; lo
+                             ng data dac_peremen=0; int idata usred_sin=0; и usred_sin и cos без коментариев
+                     426     ; #define kof 2.22  // 2.21 - max=2.25 min=0.04
+                     427     ; //#pragma src
+                     428     ; float xdata v=0;
+                     429     ; float xdata n=0;
+                     430     ; 
+                     431     ; unsigned int data tim_h_0=0;
+                     432     ; unsigned int data tim_l_0=0;
+                     433     ; //unsigned int data rejim=0;    
+                     434     ; unsigned long data Sin=0; // значения канала 1        
+                     435     ; unsigned long data Cos=0; // значения канала 2        
+                     436     ; float delta=0;  // разница между первым и вторым каналом
+                     437     ; unsigned char data kol_siemov=4; // количество усредненых значений    // char
+                     438     ; unsigned char data ust_kol_siemov=4;                                                     
+                                          // char
+                     439     ; bit gotov=0; // флаг готовности результата АЦП после 4 преобразований на каждом канале
+                     440     ; 
+                     441     ; unsigned int idata dac_period=500;
+                     442     ; unsigned int idata schet_dac=1;
+                     443     ; unsigned int idata dac_sec=10;
+                     444     ; 
+                     445     ; unsigned int xdata period_fazi=100;
+                     446     ; unsigned int xdata period_zaderjki=15;
+                     447     ; float xdata verhniy_pridel=1;
+                     448     ; float xdata nijniy_pridel=-1;
+                     449     ; float xdata interval=0;
+                     450     ; float xdata koef_usileniya=0;
+A51 MACRO ASSEMBLER  Z2                                                                   10/19/2005 09:24:03 PAGE     8
+
+                     451     ; unsigned int period=0;
+                     452     ; int idata usred_sin=0; 
+                     453     ; int idata usred_cos=0;
+                     454     ; int idata usred_sin_dac=0; 
+                     455     ; int idata usred_cos_dac=0;  
+                     456     ; //int i=0;
+                     457     ; unsigned int schet_uart=250;
+                     458     ; const float ves_razrayda=0.0006103515625;
+                     459     ; float uart_perem=0;
+                     460     ; bit dac_gotov=0;
+                     461     ; long data dac_peremen=0;
+                     462     ; //int data dac_peremen1=0;
+                     463     ; bit pit=0;
+                     464     ; bit vx=0;
+                     465     ; bit write_flash_verh=0;
+                     466     ; bit write_flash_niz=0;
+                     467     ; bit dac_out=1;         
+                     468     ; //------------------------------------------
+----                 469     CSEG    AT      00003H
+0003 020000   F      470             LJMP    _INT0_
+                     471     
+                     472     ; void _INT0_ (void) interrupt 0
+                     473     
+----                 474             RSEG  ?PR?_INT0_?Z2
+                     475             USING   0
+0000                 476     _INT0_:
+0000 C0E0            477             PUSH    ACC
+0002 C0F0            478             PUSH    B
+0004 C083            479             PUSH    DPH
+0006 C082            480             PUSH    DPL
+0008 C0D0            481             PUSH    PSW
+000A E8              482             MOV     A,R0
+000B C0E0            483             PUSH    ACC
+000D E9              484             MOV     A,R1
+000E C0E0            485             PUSH    ACC
+0010 EA              486             MOV     A,R2
+0011 C0E0            487             PUSH    ACC
+0013 EB              488             MOV     A,R3
+0014 C0E0            489             PUSH    ACC
+0016 EC              490             MOV     A,R4
+0017 C0E0            491             PUSH    ACC
+0019 ED              492             MOV     A,R5
+001A C0E0            493             PUSH    ACC
+001C EE              494             MOV     A,R6
+001D C0E0            495             PUSH    ACC
+001F EF              496             MOV     A,R7
+0020 C0E0            497             PUSH    ACC
+                     498             USING   0
+                     499                             ; SOURCE LINE # 48
+                     500     ; {
+                     501     ; nijniy_pridel=delta;
+                     502                             ; SOURCE LINE # 50
+0022 AF00     F      503             MOV     R7,delta+03H
+0024 AE00     F      504             MOV     R6,delta+02H
+0026 AD00     F      505             MOV     R5,delta+01H
+0028 AC00     F      506             MOV     R4,delta
+002A 900000   F      507             MOV     DPTR,#nijniy_pridel
+002D 120000   F      508             LCALL   ?C?LSTXDATA
+                     509     ; interval=verhniy_pridel-nijniy_pridel;          // маштабирование
+                     510                             ; SOURCE LINE # 51
+0030 900000   F      511             MOV     DPTR,#nijniy_pridel
+0033 120000   F      512             LCALL   ?C?LLDXDATA0
+0036 900000   F      513             MOV     DPTR,#verhniy_pridel
+0039 120000   F      514             LCALL   ?C?LLDXDATA
+003C 120000   F      515             LCALL   ?C?FPSUB
+003F 900000   F      516             MOV     DPTR,#interval
+A51 MACRO ASSEMBLER  Z2                                                                   10/19/2005 09:24:03 PAGE     9
+
+0042 120000   F      517             LCALL   ?C?LSTXDATA
+                     518     ; koef_usileniya=kof/interval;
+                     519                             ; SOURCE LINE # 52
+0045 900000   F      520             MOV     DPTR,#interval
+0048 120000   F      521             LCALL   ?C?LLDXDATA0
+004B 7F7B            522             MOV     R7,#07BH
+004D 7E14            523             MOV     R6,#014H
+004F 7D0E            524             MOV     R5,#0EH
+0051 7C40            525             MOV     R4,#040H
+0053 120000   F      526             LCALL   ?C?FPDIV
+0056 900000   F      527             MOV     DPTR,#koef_usileniya
+0059 120000   F      528             LCALL   ?C?LSTXDATA
+                     529     ; write_flash_niz=1;
+                     530                             ; SOURCE LINE # 53
+005C D200     F      531             SETB    write_flash_niz
+                     532     ; }
+                     533                             ; SOURCE LINE # 54
+005E D0E0            534             POP     ACC
+0060 FF              535             MOV     R7,A
+0061 D0E0            536             POP     ACC
+0063 FE              537             MOV     R6,A
+0064 D0E0            538             POP     ACC
+0066 FD              539             MOV     R5,A
+0067 D0E0            540             POP     ACC
+0069 FC              541             MOV     R4,A
+006A D0E0            542             POP     ACC
+006C FB              543             MOV     R3,A
+006D D0E0            544             POP     ACC
+006F FA              545             MOV     R2,A
+0070 D0E0            546             POP     ACC
+0072 F9              547             MOV     R1,A
+0073 D0E0            548             POP     ACC
+0075 F8              549             MOV     R0,A
+0076 D0D0            550             POP     PSW
+0078 D082            551             POP     DPL
+007A D083            552             POP     DPH
+007C D0F0            553             POP     B
+007E D0E0            554             POP     ACC
+0080 32              555             RETI    
+                     556     ; END OF _INT0_
+                     557     
+----                 558     CSEG    AT      00013H
+0013 020000   F      559             LJMP    _INT1_
+                     560     
+                     561     ; //------------------------------------------
+                     562     ; void _INT1_ (void) interrupt 2
+                     563     
+----                 564             RSEG  ?PR?_INT1_?Z2
+                     565             USING   0
+0000                 566     _INT1_:
+0000 C0E0            567             PUSH    ACC
+0002 C0F0            568             PUSH    B
+0004 C083            569             PUSH    DPH
+0006 C082            570             PUSH    DPL
+0008 C0D0            571             PUSH    PSW
+000A E8              572             MOV     A,R0
+000B C0E0            573             PUSH    ACC
+000D E9              574             MOV     A,R1
+000E C0E0            575             PUSH    ACC
+0010 EA              576             MOV     A,R2
+0011 C0E0            577             PUSH    ACC
+0013 EB              578             MOV     A,R3
+0014 C0E0            579             PUSH    ACC
+0016 EC              580             MOV     A,R4
+0017 C0E0            581             PUSH    ACC
+0019 ED              582             MOV     A,R5
+A51 MACRO ASSEMBLER  Z2                                                                   10/19/2005 09:24:03 PAGE    10
+
+001A C0E0            583             PUSH    ACC
+001C EE              584             MOV     A,R6
+001D C0E0            585             PUSH    ACC
+001F EF              586             MOV     A,R7
+0020 C0E0            587             PUSH    ACC
+                     588             USING   0
+                     589                             ; SOURCE LINE # 56
+                     590     ; {
+                     591     ; verhniy_pridel=delta;
+                     592                             ; SOURCE LINE # 58
+0022 AF00     F      593             MOV     R7,delta+03H
+0024 AE00     F      594             MOV     R6,delta+02H
+0026 AD00     F      595             MOV     R5,delta+01H
+0028 AC00     F      596             MOV     R4,delta
+002A 900000   F      597             MOV     DPTR,#verhniy_pridel
+002D 120000   F      598             LCALL   ?C?LSTXDATA
+                     599     ; interval=verhniy_pridel-nijniy_pridel;          // маштабирование
+                     600                             ; SOURCE LINE # 59
+0030 900000   F      601             MOV     DPTR,#nijniy_pridel
+0033 120000   F      602             LCALL   ?C?LLDXDATA0
+0036 900000   F      603             MOV     DPTR,#verhniy_pridel
+0039 120000   F      604             LCALL   ?C?LLDXDATA
+003C 120000   F      605             LCALL   ?C?FPSUB
+003F 900000   F      606             MOV     DPTR,#interval
+0042 120000   F      607             LCALL   ?C?LSTXDATA
+                     608     ; koef_usileniya=kof/interval;
+                     609                             ; SOURCE LINE # 60
+0045 900000   F      610             MOV     DPTR,#interval
+0048 120000   F      611             LCALL   ?C?LLDXDATA0
+004B 7F7B            612             MOV     R7,#07BH
+004D 7E14            613             MOV     R6,#014H
+004F 7D0E            614             MOV     R5,#0EH
+0051 7C40            615             MOV     R4,#040H
+0053 120000   F      616             LCALL   ?C?FPDIV
+0056 900000   F      617             MOV     DPTR,#koef_usileniya
+0059 120000   F      618             LCALL   ?C?LSTXDATA
+                     619     ; write_flash_verh=1;
+                     620                             ; SOURCE LINE # 61
+005C D200     F      621             SETB    write_flash_verh
+                     622     ; }
+                     623                             ; SOURCE LINE # 62
+005E D0E0            624             POP     ACC
+0060 FF              625             MOV     R7,A
+0061 D0E0            626             POP     ACC
+0063 FE              627             MOV     R6,A
+0064 D0E0            628             POP     ACC
+0066 FD              629             MOV     R5,A
+0067 D0E0            630             POP     ACC
+0069 FC              631             MOV     R4,A
+006A D0E0            632             POP     ACC
+006C FB              633             MOV     R3,A
+006D D0E0            634             POP     ACC
+006F FA              635             MOV     R2,A
+0070 D0E0            636             POP     ACC
+0072 F9              637             MOV     R1,A
+0073 D0E0            638             POP     ACC
+0075 F8              639             MOV     R0,A
+0076 D0D0            640             POP     PSW
+0078 D082            641             POP     DPL
+007A D083            642             POP     DPH
+007C D0F0            643             POP     B
+007E D0E0            644             POP     ACC
+0080 32              645             RETI    
+                     646     ; END OF _INT1_
+                     647     
+----                 648     CSEG    AT      0002BH
+A51 MACRO ASSEMBLER  Z2                                                                   10/19/2005 09:24:03 PAGE    11
+
+002B 020000   F      649             LJMP    _TR2_
+                     650     
+                     651     ; //------------------------------------------
+                     652     ; void _TR2_ (void) interrupt 5
+                     653     
+----                 654             RSEG  ?PR?_TR2_?Z2
+                     655             USING   0
+0000                 656     _TR2_:
+0000 C0E0            657             PUSH    ACC
+0002 C0D0            658             PUSH    PSW
+                     659                             ; SOURCE LINE # 64
+                     660     ; {
+                     661     ; T0=~T0;
+                     662                             ; SOURCE LINE # 66
+0004 B2B4            663             CPL     T0
+                     664     ; T1=~T1;
+                     665                             ; SOURCE LINE # 67
+0006 B2B5            666             CPL     T1
+                     667     ; //P3=P3^0x30;
+                     668     ; pit^=1;
+                     669                             ; SOURCE LINE # 69
+0008 A200     F      670             MOV     C,pit
+000A B3              671             CPL     C
+000B 9200     F      672             MOV     pit,C
+                     673     ; //vx=pit|rejim;
+                     674     ; if(pit)                                                                          
+                     675                             ; SOURCE LINE # 71
+000D 300008   F      676             JNB     pit,?C0003
+                     677     ; {
+                     678                             ; SOURCE LINE # 72
+                     679     ; TH0=tim_h_0;
+                     680                             ; SOURCE LINE # 73
+0010 85008C   F      681             MOV     TH0,tim_h_0+01H
+                     682     ; TL0=tim_l_0;
+                     683                             ; SOURCE LINE # 74
+0013 85008A   F      684             MOV     TL0,tim_l_0+01H
+                     685     ; TR0=1;
+                     686                             ; SOURCE LINE # 75
+0016 D28C            687             SETB    TR0
+                     688     ; }
+                     689                             ; SOURCE LINE # 76
+0018                 690     ?C0003:
+                     691     ; TF2=0;
+                     692                             ; SOURCE LINE # 77
+0018 C2CF            693             CLR     TF2
+                     694     ; }
+                     695                             ; SOURCE LINE # 78
+001A D0D0            696             POP     PSW
+001C D0E0            697             POP     ACC
+001E 32              698             RETI    
+                     699     ; END OF _TR2_
+                     700     
+----                 701     CSEG    AT      0000BH
+000B 020000   F      702             LJMP    _TR0_
+                     703     
+                     704     ; 
+                     705     ; 
+                     706     ; //------------------------------------------
+                     707     ; void _TR0_ (void) interrupt 1  // задержка перед работой АЦП
+                     708     
+----                 709             RSEG  ?PR?_TR0_?Z2
+                     710             USING   0
+0000                 711     _TR0_:
+                     712                             ; SOURCE LINE # 82
+                     713     ; {
+                     714     ; //RD=1;
+A51 MACRO ASSEMBLER  Z2                                                                   10/19/2005 09:24:03 PAGE    12
+
+                     715     ; SCONV=1;
+                     716                             ; SOURCE LINE # 85
+0000 D2DC            717             SETB    SCONV
+                     718     ; TR0=0;
+                     719                             ; SOURCE LINE # 86
+0002 C28C            720             CLR     TR0
+                     721     ; EA=0;
+                     722                             ; SOURCE LINE # 87
+0004 C2AF            723             CLR     EA
+                     724     ; WDWR=1;
+                     725                             ; SOURCE LINE # 88
+0006 D2C0            726             SETB    WDWR
+                     727     ; WDE=1;         
+                     728                             ; SOURCE LINE # 89
+0008 D2C1            729             SETB    WDE
+                     730     ; EA=1;
+                     731                             ; SOURCE LINE # 90
+000A D2AF            732             SETB    EA
+                     733     ; }
+                     734                             ; SOURCE LINE # 91
+000C 32              735             RETI    
+                     736     ; END OF _TR0_
+                     737     
+----                 738     CSEG    AT      0001BH
+001B 020000   F      739             LJMP    _TR1_
+                     740     
+                     741     ; 
+                     742     ; 
+                     743     ; 
+                     744     ; //------------------------------------------
+                     745     ; void _TR1_ (void) interrupt 3  // ЦАП   
+                     746     
+----                 747             RSEG  ?PR?_TR1_?Z2
+                     748             USING   0
+0000                 749     _TR1_:
+0000 C0E0            750             PUSH    ACC
+0002 E8              751             MOV     A,R0
+0003 C0E0            752             PUSH    ACC
+0005 E9              753             MOV     A,R1
+0006 C0E0            754             PUSH    ACC
+                     755             USING   0
+                     756                             ; SOURCE LINE # 96
+                     757     ; {
+                     758     ; TH1=0xA9;                        // период 0.002
+                     759                             ; SOURCE LINE # 98
+0008 758DA9          760             MOV     TH1,#0A9H
+                     761     ; TL1=0x99;
+                     762                             ; SOURCE LINE # 99
+000B 758B99          763             MOV     TL1,#099H
+                     764     ; if(schet_dac==dac_period)
+                     765                             ; SOURCE LINE # 100
+000E 7900     F      766             MOV     R1,#LOW (schet_dac+01H)
+0010 E7              767             MOV     A,@R1
+0011 7800     F      768             MOV     R0,#LOW (dac_period+01H)
+0013 66              769             XRL     A,@R0
+0014 7004            770             JNZ     ?C0025
+0016 19              771             DEC     R1
+0017 E7              772             MOV     A,@R1
+0018 18              773             DEC     R0
+0019 66              774             XRL     A,@R0
+001A                 775     ?C0025:
+001A 7010            776             JNZ     ?C0006
+                     777     ; {
+                     778                             ; SOURCE LINE # 101
+                     779     ;  if(gotov==1)
+                     780                             ; SOURCE LINE # 102
+A51 MACRO ASSEMBLER  Z2                                                                   10/19/2005 09:24:03 PAGE    13
+
+001C 300004   F      781             JNB     gotov,?C0007
+                     782     ;    {
+                     783                             ; SOURCE LINE # 103
+                     784     ;    dac_gotov=1; 
+                     785                             ; SOURCE LINE # 104
+001F D200     F      786             SETB    dac_gotov
+                     787     ;    gotov=0;
+                     788                             ; SOURCE LINE # 105
+0021 C200     F      789             CLR     gotov
+                     790     ;    }
+                     791                             ; SOURCE LINE # 106
+0023                 792     ?C0007:
+                     793     ; schet_dac=1;
+                     794                             ; SOURCE LINE # 107
+0023 7800     F      795             MOV     R0,#LOW (schet_dac)
+0025 7600            796             MOV     @R0,#00H
+0027 08              797             INC     R0
+0028 7601            798             MOV     @R0,#01H
+                     799     ; }
+                     800                             ; SOURCE LINE # 108
+002A 8008            801             SJMP    ?C0009
+002C                 802     ?C0006:
+                     803     ; else
+                     804     ; schet_dac++;  
+                     805                             ; SOURCE LINE # 110
+002C 7800     F      806             MOV     R0,#LOW (schet_dac+01H)
+002E 06              807             INC     @R0
+002F E6              808             MOV     A,@R0
+0030 18              809             DEC     R0
+0031 7001            810             JNZ     ?C0026
+0033 06              811             INC     @R0
+0034                 812     ?C0026:
+                     813     ; }
+                     814                             ; SOURCE LINE # 111
+0034                 815     ?C0009:
+0034 D0E0            816             POP     ACC
+0036 F9              817             MOV     R1,A
+0037 D0E0            818             POP     ACC
+0039 F8              819             MOV     R0,A
+003A D0E0            820             POP     ACC
+003C 32              821             RETI    
+                     822     ; END OF _TR1_
+                     823     
+----                 824     CSEG    AT      00033H
+0033 020000   F      825             LJMP    _ADC_
+                     826     
+                     827     ; 
+                     828     ; 
+                     829     ; 
+                     830     ; //------------------------------------------
+                     831     ; void _ADC_ (void) interrupt 6
+                     832     
+----                 833             RSEG  ?PR?_ADC_?Z2
+                     834             USING   0
+0000                 835     _ADC_:
+0000 C0E0            836             PUSH    ACC
+0002 C0D0            837             PUSH    PSW
+0004 E8              838             MOV     A,R0
+0005 C0E0            839             PUSH    ACC
+0007 EC              840             MOV     A,R4
+0008 C0E0            841             PUSH    ACC
+000A ED              842             MOV     A,R5
+000B C0E0            843             PUSH    ACC
+000D EE              844             MOV     A,R6
+000E C0E0            845             PUSH    ACC
+0010 EF              846             MOV     A,R7
+A51 MACRO ASSEMBLER  Z2                                                                   10/19/2005 09:24:03 PAGE    14
+
+0011 C0E0            847             PUSH    ACC
+                     848             USING   0
+                     849                             ; SOURCE LINE # 116
+                     850     ; {
+                     851     ; 
+                     852     ;  if(CS0==0)
+                     853                             ; SOURCE LINE # 119
+0013 E5DA            854             MOV     A,ADCDATAH
+0015 540F            855             ANL     A,#0FH
+0017 FE              856             MOV     R6,A
+0018 ADD9            857             MOV     R5,ADCDATAL
+001A ED              858             MOV     A,R5
+001B FF              859             MOV     R7,A
+001C E4              860             CLR     A
+001D FC              861             MOV     R4,A
+001E FD              862             MOV     R5,A
+001F 20D819          863             JB      CS0,?C0010
+                     864     ;  Sin+=(((ADCDATAH&0x0F)<<8)|ADCDATAL);
+                     865                             ; SOURCE LINE # 120
+0022 E500     F      866             MOV     A,Sin+03H
+0024 2F              867             ADD     A,R7
+0025 FF              868             MOV     R7,A
+0026 E500     F      869             MOV     A,Sin+02H
+0028 3E              870             ADDC    A,R6
+0029 FE              871             MOV     R6,A
+002A ED              872             MOV     A,R5
+002B 3500     F      873             ADDC    A,Sin+01H
+002D FD              874             MOV     R5,A
+002E EC              875             MOV     A,R4
+002F 3500     F      876             ADDC    A,Sin
+0031 8F00     F      877             MOV     Sin+03H,R7
+0033 8E00     F      878             MOV     Sin+02H,R6
+0035 8D00     F      879             MOV     Sin+01H,R5
+0037 F500     F      880             MOV     Sin,A
+0039 8019            881             SJMP    ?C0011
+003B                 882     ?C0010:
+                     883     ;  else
+                     884     ;  {
+                     885                             ; SOURCE LINE # 122
+                     886     ;  Cos+=(((ADCDATAH&0x0F)<<8)|ADCDATAL);
+                     887                             ; SOURCE LINE # 123
+003B E500     F      888             MOV     A,Cos+03H
+003D 2F              889             ADD     A,R7
+003E FF              890             MOV     R7,A
+003F E500     F      891             MOV     A,Cos+02H
+0041 3E              892             ADDC    A,R6
+0042 FE              893             MOV     R6,A
+0043 ED              894             MOV     A,R5
+0044 3500     F      895             ADDC    A,Cos+01H
+0046 FD              896             MOV     R5,A
+0047 EC              897             MOV     A,R4
+0048 3500     F      898             ADDC    A,Cos
+004A 8F00     F      899             MOV     Cos+03H,R7
+004C 8E00     F      900             MOV     Cos+02H,R6
+004E 8D00     F      901             MOV     Cos+01H,R5
+0050 F500     F      902             MOV     Cos,A
+                     903     ;  kol_siemov--;
+                     904                             ; SOURCE LINE # 124
+0052 1500     F      905             DEC     kol_siemov
+                     906     ;  }
+                     907                             ; SOURCE LINE # 125
+0054                 908     ?C0011:
+                     909     ;  CS0^=1;
+                     910                             ; SOURCE LINE # 126
+0054 A2D8            911             MOV     C,CS0
+0056 B3              912             CPL     C
+A51 MACRO ASSEMBLER  Z2                                                                   10/19/2005 09:24:03 PAGE    15
+
+0057 92D8            913             MOV     CS0,C
+                     914     ;  CS1=0;
+                     915                             ; SOURCE LINE # 127
+0059 C2D9            916             CLR     CS1
+                     917     ;     
+                     918     ; if(kol_siemov==0)
+                     919                             ; SOURCE LINE # 129
+005B E500     F      920             MOV     A,kol_siemov
+005D 7048            921             JNZ     ?C0014
+                     922     ;  {
+                     923                             ; SOURCE LINE # 130
+                     924     ;  kol_siemov=ust_kol_siemov;
+                     925                             ; SOURCE LINE # 131
+005F 850000   F      926             MOV     kol_siemov,ust_kol_siemov
+                     927     ;  if(dac_out==1)
+                     928                             ; SOURCE LINE # 132
+0062 300028   F      929             JNB     dac_out,?C0013
+                     930     ;   {
+                     931                             ; SOURCE LINE # 133
+                     932     ;  usred_sin=Sin>>2;// 2
+                     933                             ; SOURCE LINE # 134
+0065 AF00     F      934             MOV     R7,Sin+03H
+0067 AE00     F      935             MOV     R6,Sin+02H
+0069 AD00     F      936             MOV     R5,Sin+01H
+006B AC00     F      937             MOV     R4,Sin
+006D 7802            938             MOV     R0,#02H
+006F 120000   F      939             LCALL   ?C?ULSHR
+0072 7800     F      940             MOV     R0,#LOW (usred_sin)
+0074 EE              941             MOV     A,R6
+0075 F6              942             MOV     @R0,A
+0076 08              943             INC     R0
+0077 EF              944             MOV     A,R7
+0078 F6              945             MOV     @R0,A
+                     946     ;  usred_cos=Cos>>2;// 2
+                     947                             ; SOURCE LINE # 135
+0079 AF00     F      948             MOV     R7,Cos+03H
+007B AE00     F      949             MOV     R6,Cos+02H
+007D AD00     F      950             MOV     R5,Cos+01H
+007F AC00     F      951             MOV     R4,Cos
+0081 7802            952             MOV     R0,#02H
+0083 120000   F      953             LCALL   ?C?ULSHR
+0086 7800     F      954             MOV     R0,#LOW (usred_cos)
+0088 EE              955             MOV     A,R6
+0089 F6              956             MOV     @R0,A
+008A 08              957             INC     R0
+008B EF              958             MOV     A,R7
+008C F6              959             MOV     @R0,A
+                     960     ;   }
+                     961                             ; SOURCE LINE # 136
+008D                 962     ?C0013:
+                     963     ;  Cos=Sin=Sin&0x00;
+                     964                             ; SOURCE LINE # 137
+008D 750000   F      965             MOV     Sin+03H,#00H
+0090 750000   F      966             MOV     Sin+02H,#00H
+0093 750000   F      967             MOV     Sin+01H,#00H
+0096 750000   F      968             MOV     Sin,#00H
+0099 750000   F      969             MOV     Cos+03H,#00H
+009C 750000   F      970             MOV     Cos+02H,#00H
+009F 750000   F      971             MOV     Cos+01H,#00H
+00A2 750000   F      972             MOV     Cos,#00H
+                     973     ;  gotov=1;
+                     974                             ; SOURCE LINE # 138
+00A5 D200     F      975             SETB    gotov
+                     976     ;  } 
+                     977                             ; SOURCE LINE # 139
+                     978     ; }
+A51 MACRO ASSEMBLER  Z2                                                                   10/19/2005 09:24:03 PAGE    16
+
+                     979                             ; SOURCE LINE # 140
+00A7                 980     ?C0014:
+00A7 D0E0            981             POP     ACC
+00A9 FF              982             MOV     R7,A
+00AA D0E0            983             POP     ACC
+00AC FE              984             MOV     R6,A
+00AD D0E0            985             POP     ACC
+00AF FD              986             MOV     R5,A
+00B0 D0E0            987             POP     ACC
+00B2 FC              988             MOV     R4,A
+00B3 D0E0            989             POP     ACC
+00B5 F8              990             MOV     R0,A
+00B6 D0D0            991             POP     PSW
+00B8 D0E0            992             POP     ACC
+00BA 32              993             RETI    
+                     994     ; END OF _ADC_
+                     995     
+                     996     ; //-----------------------------------------
+                     997     ; 
+                     998     ; void main (void)
+                     999     
+----                1000             RSEG  ?PR?main?Z2
+0000                1001     main:
+                    1002             USING   0
+                    1003                             ; SOURCE LINE # 143
+                    1004     ; {
+                    1005                             ; SOURCE LINE # 144
+                    1006     ; T0=0;
+                    1007                             ; SOURCE LINE # 145
+0000 C2B4           1008             CLR     T0
+                    1009     ; T1=0;
+                    1010                             ; SOURCE LINE # 146
+0002 C2B5           1011             CLR     T1
+                    1012     ; RD=1;
+                    1013                             ; SOURCE LINE # 147
+0004 D2B7           1014             SETB    RD
+                    1015     ; RD=0;
+                    1016                             ; SOURCE LINE # 148
+0006 C2B7           1017             CLR     RD
+                    1018     ; 
+                    1019     ; kol_siemov=4;
+                    1020                             ; SOURCE LINE # 150
+0008 750004   F     1021             MOV     kol_siemov,#04H
+                    1022     ; ust_kol_siemov=4;
+                    1023                             ; SOURCE LINE # 151
+000B 750004   F     1024             MOV     ust_kol_siemov,#04H
+                    1025     ; 
+                    1026     ; flash_read (&verhniy_pridel,sizeof(verhniy_pridel),0x00000000);
+                    1027                             ; SOURCE LINE # 153
+000E 7B01           1028             MOV     R3,#01H
+0010 7A00     F     1029             MOV     R2,#HIGH (verhniy_pridel)
+0012 7900     F     1030             MOV     R1,#LOW (verhniy_pridel)
+0014 E4             1031             CLR     A
+0015 F500     F     1032             MOV     ?_flash_read?BYTE+0AH,A
+0017 F500     F     1033             MOV     ?_flash_read?BYTE+09H,A
+0019 F500     F     1034             MOV     ?_flash_read?BYTE+08H,A
+001B F500     F     1035             MOV     ?_flash_read?BYTE+07H,A
+001D 7F04           1036             MOV     R7,#04H
+001F FE             1037             MOV     R6,A
+0020 FD             1038             MOV     R5,A
+0021 FC             1039             MOV     R4,A
+0022 120000   F     1040             LCALL   _flash_read
+                    1041     ; flash_read (&nijniy_pridel,sizeof(nijniy_pridel),0x00000004);
+                    1042                             ; SOURCE LINE # 154
+0025 7B01           1043             MOV     R3,#01H
+0027 7A00     F     1044             MOV     R2,#HIGH (nijniy_pridel)
+A51 MACRO ASSEMBLER  Z2                                                                   10/19/2005 09:24:03 PAGE    17
+
+0029 7900     F     1045             MOV     R1,#LOW (nijniy_pridel)
+002B E4             1046             CLR     A
+002C 750004   F     1047             MOV     ?_flash_read?BYTE+0AH,#04H
+002F F500     F     1048             MOV     ?_flash_read?BYTE+09H,A
+0031 F500     F     1049             MOV     ?_flash_read?BYTE+08H,A
+0033 F500     F     1050             MOV     ?_flash_read?BYTE+07H,A
+0035 7F04           1051             MOV     R7,#04H
+0037 FE             1052             MOV     R6,A
+0038 FD             1053             MOV     R5,A
+0039 FC             1054             MOV     R4,A
+003A 120000   F     1055             LCALL   _flash_read
+                    1056     ; 
+                    1057     ; if(_chkfloat_(verhniy_pridel)==4)
+                    1058                             ; SOURCE LINE # 156
+003D 900000   F     1059             MOV     DPTR,#verhniy_pridel
+0040 120000   F     1060             LCALL   ?C?LLDXDATA
+0043 120000   F     1061             LCALL   ?C?CHKFLOAT
+0046 FF             1062             MOV     R7,A
+0047 BF040A         1063             CJNE    R7,#04H,?C0015
+                    1064     ; verhniy_pridel=1;
+                    1065                             ; SOURCE LINE # 157
+004A 900000   F     1066             MOV     DPTR,#verhniy_pridel
+004D 120000   F     1067             LCALL   ?C?LSTKXDATA
+0050 3F             1068             DB      03FH
+0051 80             1069             DB      080H
+0052 00             1070             DB      00H
+0053 00             1071             DB      00H
+0054                1072     ?C0015:
+                    1073     ; if(_chkfloat_(nijniy_pridel)==4)
+                    1074                             ; SOURCE LINE # 158
+0054 900000   F     1075             MOV     DPTR,#nijniy_pridel
+0057 120000   F     1076             LCALL   ?C?LLDXDATA
+005A 120000   F     1077             LCALL   ?C?CHKFLOAT
+005D FF             1078             MOV     R7,A
+005E BF040A         1079             CJNE    R7,#04H,?C0016
+                    1080     ; nijniy_pridel=-1;
+                    1081                             ; SOURCE LINE # 159
+0061 900000   F     1082             MOV     DPTR,#nijniy_pridel
+0064 120000   F     1083             LCALL   ?C?LSTKXDATA
+0067 BF             1084             DB      0BFH
+0068 80             1085             DB      080H
+0069 00             1086             DB      00H
+006A 00             1087             DB      00H
+006B                1088     ?C0016:
+                    1089     ; DACCON=0x09;           // 2.5 вольта
+                    1090                             ; SOURCE LINE # 160
+006B 75FD09         1091             MOV     DACCON,#09H
+                    1092     ; dac_period=dac_period/dac_sec;                 // количество раз в секунду
+                    1093                             ; SOURCE LINE # 161
+006E 7800     F     1094             MOV     R0,#LOW (dac_period)
+0070 E6             1095             MOV     A,@R0
+0071 FE             1096             MOV     R6,A
+0072 08             1097             INC     R0
+0073 E6             1098             MOV     A,@R0
+0074 FF             1099             MOV     R7,A
+0075 7800     F     1100             MOV     R0,#LOW (dac_sec)
+0077 E6             1101             MOV     A,@R0
+0078 FC             1102             MOV     R4,A
+0079 08             1103             INC     R0
+007A E6             1104             MOV     A,@R0
+007B FD             1105             MOV     R5,A
+007C 120000   F     1106             LCALL   ?C?UIDIV
+007F 7800     F     1107             MOV     R0,#LOW (dac_period)
+0081 EE             1108             MOV     A,R6
+0082 F6             1109             MOV     @R0,A
+0083 08             1110             INC     R0
+A51 MACRO ASSEMBLER  Z2                                                                   10/19/2005 09:24:03 PAGE    18
+
+0084 EF             1111             MOV     A,R7
+0085 F6             1112             MOV     @R0,A
+                    1113     ; 
+                    1114     ; 
+                    1115     ; interval=verhniy_pridel-nijniy_pridel;          // маштабирование
+                    1116                             ; SOURCE LINE # 164
+0086 900000   F     1117             MOV     DPTR,#nijniy_pridel
+0089 120000   F     1118             LCALL   ?C?LLDXDATA0
+008C 900000   F     1119             MOV     DPTR,#verhniy_pridel
+008F 120000   F     1120             LCALL   ?C?LLDXDATA
+0092 120000   F     1121             LCALL   ?C?FPSUB
+0095 900000   F     1122             MOV     DPTR,#interval
+0098 120000   F     1123             LCALL   ?C?LSTXDATA
+                    1124     ; koef_usileniya=kof/interval;
+                    1125                             ; SOURCE LINE # 165
+009B 900000   F     1126             MOV     DPTR,#interval
+009E 120000   F     1127             LCALL   ?C?LLDXDATA0
+00A1 7F7B           1128             MOV     R7,#07BH
+00A3 7E14           1129             MOV     R6,#014H
+00A5 7D0E           1130             MOV     R5,#0EH
+00A7 7C40           1131             MOV     R4,#040H
+00A9 120000   F     1132             LCALL   ?C?FPDIV
+00AC 900000   F     1133             MOV     DPTR,#koef_usileniya
+00AF 120000   F     1134             LCALL   ?C?LSTXDATA
+                    1135     ; 
+                    1136     ; T2CON=0x00;
+                    1137                             ; SOURCE LINE # 167
+00B2 E4             1138             CLR     A
+00B3 F5C8           1139             MOV     T2CON,A
+                    1140     ; TMOD=0x11; //16 - разрядный таймеры 0 и 1, внутренние стробирование
+                    1141                             ; SOURCE LINE # 168
+00B5 758911         1142             MOV     TMOD,#011H
+                    1143     ; ET0=1; //разрешение прер-я от Timer0
+                    1144                             ; SOURCE LINE # 169
+00B8 D2A9           1145             SETB    ET0
+                    1146     ; ET1=1; //разрешение прер-я от Timer1
+                    1147                             ; SOURCE LINE # 170
+00BA D2AB           1148             SETB    ET1
+                    1149     ; ET2=1; //разрешение прер-я от Timer2
+                    1150                             ; SOURCE LINE # 171
+00BC D2AD           1151             SETB    ET2
+                    1152     ; 
+                    1153     ; period=0xFFFF-(((float)(period_fazi/2)*0.000001)/0.00000009); // период P2.6 и P2.7
+                    1154                             ; SOURCE LINE # 173
+00BE 900000   F     1155             MOV     DPTR,#period_fazi
+00C1 E0             1156             MOVX    A,@DPTR
+00C2 C3             1157             CLR     C
+00C3 13             1158             RRC     A
+00C4 FC             1159             MOV     R4,A
+00C5 A3             1160             INC     DPTR
+00C6 E0             1161             MOVX    A,@DPTR
+00C7 13             1162             RRC     A
+00C8 FD             1163             MOV     R5,A
+00C9 E4             1164             CLR     A
+00CA 120000   F     1165             LCALL   ?C?FCASTI
+00CD 7BBD           1166             MOV     R3,#0BDH
+00CF 7A37           1167             MOV     R2,#037H
+00D1 7986           1168             MOV     R1,#086H
+00D3 7835           1169             MOV     R0,#035H
+00D5 120000   F     1170             LCALL   ?C?FPMUL
+00D8 7B06           1171             MOV     R3,#06H
+00DA 7A46           1172             MOV     R2,#046H
+00DC 79C1           1173             MOV     R1,#0C1H
+00DE 7833           1174             MOV     R0,#033H
+00E0 120000   F     1175             LCALL   ?C?FPDIV
+00E3 C8             1176             XCH     A,R0
+A51 MACRO ASSEMBLER  Z2                                                                   10/19/2005 09:24:03 PAGE    19
+
+00E4 EC             1177             MOV     A,R4
+00E5 C8             1178             XCH     A,R0
+00E6 C9             1179             XCH     A,R1
+00E7 ED             1180             MOV     A,R5
+00E8 C9             1181             XCH     A,R1
+00E9 CA             1182             XCH     A,R2
+00EA EE             1183             MOV     A,R6
+00EB CA             1184             XCH     A,R2
+00EC CB             1185             XCH     A,R3
+00ED EF             1186             MOV     A,R7
+00EE CB             1187             XCH     A,R3
+00EF 7F00           1188             MOV     R7,#00H
+00F1 7EFF           1189             MOV     R6,#0FFH
+00F3 7D7F           1190             MOV     R5,#07FH
+00F5 7C47           1191             MOV     R4,#047H
+00F7 120000   F     1192             LCALL   ?C?FPSUB
+00FA 120000   F     1193             LCALL   ?C?CASTF
+00FD 8E00     F     1194             MOV     period,R6
+00FF 8F00     F     1195             MOV     period+01H,R7
+                    1196     ; RCAP2H=TH2=(period&0xFF00)>>8;         // 100 микросекунд
+                    1197                             ; SOURCE LINE # 174
+0101 EE             1198             MOV     A,R6
+0102 FF             1199             MOV     R7,A
+0103 F5CD           1200             MOV     TH2,A
+0105 8FCB           1201             MOV     RCAP2H,R7
+                    1202     ; RCAP2L=TL2=period&0x00FF;
+                    1203                             ; SOURCE LINE # 175
+0107 AF00     F     1204             MOV     R7,period+01H
+0109 E500     F     1205             MOV     A,period+01H
+010B F5CC           1206             MOV     TL2,A
+010D 8FCA           1207             MOV     RCAP2L,R7
+                    1208     ; 
+                    1209     ; period=0xFFFF-(int)(((((float)period_zaderjki*0.000001)-(32*0.00000009))/0.00000009)); //
+                              задержка после P2.6=1; 76 расчитано от переключения Р2_6 и до входа в подпрограмму ADC
+                    1210                             ; SOURCE LINE # 177
+010F 900000   F     1211             MOV     DPTR,#period_zaderjki
+0112 E0             1212             MOVX    A,@DPTR
+0113 FC             1213             MOV     R4,A
+0114 A3             1214             INC     DPTR
+0115 E0             1215             MOVX    A,@DPTR
+0116 FD             1216             MOV     R5,A
+0117 E4             1217             CLR     A
+0118 120000   F     1218             LCALL   ?C?FCASTI
+011B 7BBD           1219             MOV     R3,#0BDH
+011D 7A37           1220             MOV     R2,#037H
+011F 7986           1221             MOV     R1,#086H
+0121 7835           1222             MOV     R0,#035H
+0123 120000   F     1223             LCALL   ?C?FPMUL
+0126 7B06           1224             MOV     R3,#06H
+0128 7A46           1225             MOV     R2,#046H
+012A 7941           1226             MOV     R1,#041H
+012C 78B6           1227             MOV     R0,#0B6H
+012E 120000   F     1228             LCALL   ?C?FPADD
+0131 7B06           1229             MOV     R3,#06H
+0133 7A46           1230             MOV     R2,#046H
+0135 79C1           1231             MOV     R1,#0C1H
+0137 7833           1232             MOV     R0,#033H
+0139 120000   F     1233             LCALL   ?C?FPDIV
+013C 120000   F     1234             LCALL   ?C?CASTF
+013F C3             1235             CLR     C
+0140 74FF           1236             MOV     A,#0FFH
+0142 9F             1237             SUBB    A,R7
+0143 F500     F     1238             MOV     period+01H,A
+0145 74FF           1239             MOV     A,#0FFH
+0147 9E             1240             SUBB    A,R6
+0148 F500     F     1241             MOV     period,A
+A51 MACRO ASSEMBLER  Z2                                                                   10/19/2005 09:24:03 PAGE    20
+
+                    1242     ; tim_h_0=TH0=(period&0xFF00)>>8;        // 20 микросекунд
+                    1243                             ; SOURCE LINE # 178
+014A FF             1244             MOV     R7,A
+014B F58C           1245             MOV     TH0,A
+014D 750000   F     1246             MOV     tim_h_0,#00H
+0150 8F00     F     1247             MOV     tim_h_0+01H,R7
+                    1248     ; tim_l_0=TL0=period&0x00FF;
+                    1249                             ; SOURCE LINE # 179
+0152 AF00     F     1250             MOV     R7,period+01H
+0154 E500     F     1251             MOV     A,period+01H
+0156 F58A           1252             MOV     TL0,A
+0158 750000   F     1253             MOV     tim_l_0,#00H
+015B 8F00     F     1254             MOV     tim_l_0+01H,R7
+                    1255     ; 
+                    1256     ; TH1=0xA9;       // для DAC период счета 0.002
+                    1257                             ; SOURCE LINE # 181
+015D 758DA9         1258             MOV     TH1,#0A9H
+                    1259     ; TL1=0x99;
+                    1260                             ; SOURCE LINE # 182
+0160 758B99         1261             MOV     TL1,#099H
+                    1262     ; 
+                    1263     ; EA=1; //разрешение всех прерываний
+                    1264                             ; SOURCE LINE # 184
+0163 D2AF           1265             SETB    EA
+                    1266     ; //ES=1; //разрешение прер-я от UART
+                    1267     ; 
+                    1268     ; ADCCON1=0x90;   // делитель 4, пропуск тактов 1, внутреннее опорное
+                    1269                             ; SOURCE LINE # 187
+0165 75EF90         1270             MOV     ADCCON1,#090H
+                    1271     ; ADCCON2=0x00;  // 0 канал, однократное преобразование
+                    1272                             ; SOURCE LINE # 188
+0168 E4             1273             CLR     A
+0169 F5D8           1274             MOV     ADCCON2,A
+                    1275     ; EADC=1;                        //разрешение прер-я от ADC
+                    1276                             ; SOURCE LINE # 189
+016B D2AE           1277             SETB    EADC
+                    1278     ; 
+                    1279     ; PT0=1;
+                    1280                             ; SOURCE LINE # 191
+016D D2B9           1281             SETB    PT0
+                    1282     ; PADC=1;
+                    1283                             ; SOURCE LINE # 192
+016F D2BE           1284             SETB    PADC
+                    1285     ; PT2=1;        // наивысший приоритет у 2 таймера
+                    1286                             ; SOURCE LINE # 193
+0171 D2BD           1287             SETB    PT2
+                    1288     ; 
+                    1289     ; IT1=1;        // включение прерывания INT0 INT1 по фронту
+                    1290                             ; SOURCE LINE # 195
+0173 D28A           1291             SETB    IT1
+                    1292     ; IT0=1;
+                    1293                             ; SOURCE LINE # 196
+0175 D288           1294             SETB    IT0
+                    1295     ; EX0=1;        // разрешение прерывания INT0 INT1
+                    1296                             ; SOURCE LINE # 197
+0177 D2A8           1297             SETB    EX0
+                    1298     ; EX1=1;
+                    1299                             ; SOURCE LINE # 198
+0179 D2AA           1300             SETB    EX1
+                    1301     ; 
+                    1302     ; T1=1;
+                    1303                             ; SOURCE LINE # 200
+017B D2B5           1304             SETB    T1
+                    1305     ; T0=0;
+                    1306                             ; SOURCE LINE # 201
+017D C2B4           1307             CLR     T0
+A51 MACRO ASSEMBLER  Z2                                                                   10/19/2005 09:24:03 PAGE    21
+
+                    1308     ; 
+                    1309     ; EA=0;   
+                    1310                             ; SOURCE LINE # 203
+017F C2AF           1311             CLR     EA
+                    1312     ; WDWR=1;
+                    1313                             ; SOURCE LINE # 204
+0181 D2C0           1314             SETB    WDWR
+                    1315     ; WDCON=0x02;
+                    1316                             ; SOURCE LINE # 205
+0183 75C002         1317             MOV     WDCON,#02H
+                    1318     ; EA=1;
+                    1319                             ; SOURCE LINE # 206
+0186 D2AF           1320             SETB    EA
+                    1321     ; 
+                    1322     ; TR2=1; //включение Timer2
+                    1323                             ; SOURCE LINE # 208
+0188 D2CA           1324             SETB    TR2
+                    1325     ; TR1=1; //включение Timer1
+                    1326                             ; SOURCE LINE # 209
+018A D28E           1327             SETB    TR1
+018C                1328     ?C0017:
+                    1329     ; 
+                    1330     ; while(1)
+                    1331                             ; SOURCE LINE # 211
+                    1332     ; {
+                    1333                             ; SOURCE LINE # 212
+                    1334     ;  if(write_flash_verh)
+                    1335                             ; SOURCE LINE # 213
+018C 300019   F     1336             JNB     write_flash_verh,?C0019
+                    1337     ;     {
+                    1338                             ; SOURCE LINE # 214
+                    1339     ;       flash_write (&verhniy_pridel,sizeof(verhniy_pridel),0x00000000);
+                    1340                             ; SOURCE LINE # 215
+018F 7B01           1341             MOV     R3,#01H
+0191 7A00     F     1342             MOV     R2,#HIGH (verhniy_pridel)
+0193 7900     F     1343             MOV     R1,#LOW (verhniy_pridel)
+0195 E4             1344             CLR     A
+0196 F500     F     1345             MOV     ?_flash_write?BYTE+0AH,A
+0198 F500     F     1346             MOV     ?_flash_write?BYTE+09H,A
+019A F500     F     1347             MOV     ?_flash_write?BYTE+08H,A
+019C F500     F     1348             MOV     ?_flash_write?BYTE+07H,A
+019E 7F04           1349             MOV     R7,#04H
+01A0 FE             1350             MOV     R6,A
+01A1 FD             1351             MOV     R5,A
+01A2 FC             1352             MOV     R4,A
+01A3 120000   F     1353             LCALL   _flash_write
+                    1354     ;       write_flash_verh=0;
+                    1355                             ; SOURCE LINE # 216
+01A6 C200     F     1356             CLR     write_flash_verh
+                    1357     ;       }
+                    1358                             ; SOURCE LINE # 217
+01A8                1359     ?C0019:
+                    1360     ; 
+                    1361     ;  if(write_flash_niz)
+                    1362                             ; SOURCE LINE # 219
+01A8 30001A   F     1363             JNB     write_flash_niz,?C0020
+                    1364     ;     {
+                    1365                             ; SOURCE LINE # 220
+                    1366     ;       flash_write (&nijniy_pridel,sizeof(nijniy_pridel),0x00000004);
+                    1367                             ; SOURCE LINE # 221
+01AB 7B01           1368             MOV     R3,#01H
+01AD 7A00     F     1369             MOV     R2,#HIGH (nijniy_pridel)
+01AF 7900     F     1370             MOV     R1,#LOW (nijniy_pridel)
+01B1 E4             1371             CLR     A
+01B2 750004   F     1372             MOV     ?_flash_write?BYTE+0AH,#04H
+01B5 F500     F     1373             MOV     ?_flash_write?BYTE+09H,A
+A51 MACRO ASSEMBLER  Z2                                                                   10/19/2005 09:24:03 PAGE    22
+
+01B7 F500     F     1374             MOV     ?_flash_write?BYTE+08H,A
+01B9 F500     F     1375             MOV     ?_flash_write?BYTE+07H,A
+01BB 7F04           1376             MOV     R7,#04H
+01BD FE             1377             MOV     R6,A
+01BE FD             1378             MOV     R5,A
+01BF FC             1379             MOV     R4,A
+01C0 120000   F     1380             LCALL   _flash_write
+                    1381     ;       write_flash_niz=0;
+                    1382                             ; SOURCE LINE # 222
+01C3 C200     F     1383             CLR     write_flash_niz
+                    1384     ;       } 
+                    1385                             ; SOURCE LINE # 223
+01C5                1386     ?C0020:
+                    1387     ; 
+                    1388     ;   if(dac_gotov==1)
+                    1389                             ; SOURCE LINE # 225
+01C5 3000C4   F     1390             JNB     dac_gotov,?C0017
+                    1391     ;     {
+                    1392                             ; SOURCE LINE # 226
+                    1393     ;       dac_out=0;
+                    1394                             ; SOURCE LINE # 227
+01C8 C200     F     1395             CLR     dac_out
+                    1396     ;       delta=((usred_sin-usred_cos)*ves_razrayda);
+                    1397                             ; SOURCE LINE # 228
+01CA C3             1398             CLR     C
+01CB 7900     F     1399             MOV     R1,#LOW (usred_sin+01H)
+01CD E7             1400             MOV     A,@R1
+01CE 7800     F     1401             MOV     R0,#LOW (usred_cos+01H)
+01D0 96             1402             SUBB    A,@R0
+01D1 FD             1403             MOV     R5,A
+01D2 19             1404             DEC     R1
+01D3 E7             1405             MOV     A,@R1
+01D4 18             1406             DEC     R0
+01D5 96             1407             SUBB    A,@R0
+01D6 FC             1408             MOV     R4,A
+01D7 120000   F     1409             LCALL   ?C?FCASTI
+01DA AB00     F     1410             MOV     R3,ves_razrayda+03H
+01DC AA00     F     1411             MOV     R2,ves_razrayda+02H
+01DE A900     F     1412             MOV     R1,ves_razrayda+01H
+01E0 A800     F     1413             MOV     R0,ves_razrayda
+01E2 120000   F     1414             LCALL   ?C?FPMUL
+01E5 8F00     F     1415             MOV     delta+03H,R7
+01E7 8E00     F     1416             MOV     delta+02H,R6
+01E9 8D00     F     1417             MOV     delta+01H,R5
+01EB 8C00     F     1418             MOV     delta,R4
+                    1419     ;       dac_out=1; 
+                    1420                             ; SOURCE LINE # 229
+01ED D200     F     1421             SETB    dac_out
+                    1422     ;     DACCON=0x09;
+                    1423                             ; SOURCE LINE # 230
+01EF 75FD09         1424             MOV     DACCON,#09H
+                    1425     ;     dac_peremen=(int)((((interval-(verhniy_pridel-delta))*koef_usileniya)+0.03)/ves_razra
+                             yda);
+                    1426                             ; SOURCE LINE # 231
+01F2 AB00     F     1427             MOV     R3,delta+03H
+01F4 AA00     F     1428             MOV     R2,delta+02H
+01F6 A900     F     1429             MOV     R1,delta+01H
+01F8 A800     F     1430             MOV     R0,delta
+01FA 900000   F     1431             MOV     DPTR,#verhniy_pridel
+01FD 120000   F     1432             LCALL   ?C?LLDXDATA
+0200 120000   F     1433             LCALL   ?C?FPSUB
+0203 C8             1434             XCH     A,R0
+0204 EC             1435             MOV     A,R4
+0205 C8             1436             XCH     A,R0
+0206 C9             1437             XCH     A,R1
+0207 ED             1438             MOV     A,R5
+A51 MACRO ASSEMBLER  Z2                                                                   10/19/2005 09:24:03 PAGE    23
+
+0208 C9             1439             XCH     A,R1
+0209 CA             1440             XCH     A,R2
+020A EE             1441             MOV     A,R6
+020B CA             1442             XCH     A,R2
+020C CB             1443             XCH     A,R3
+020D EF             1444             MOV     A,R7
+020E CB             1445             XCH     A,R3
+020F 900000   F     1446             MOV     DPTR,#interval
+0212 120000   F     1447             LCALL   ?C?LLDXDATA
+0215 120000   F     1448             LCALL   ?C?FPSUB
+0218 900000   F     1449             MOV     DPTR,#koef_usileniya
+021B 120000   F     1450             LCALL   ?C?LLDXDATA0
+021E 120000   F     1451             LCALL   ?C?FPMUL
+0221 7B8F           1452             MOV     R3,#08FH
+0223 7AC2           1453             MOV     R2,#0C2H
+0225 79F5           1454             MOV     R1,#0F5H
+0227 783C           1455             MOV     R0,#03CH
+0229 120000   F     1456             LCALL   ?C?FPADD
+022C AB00     F     1457             MOV     R3,ves_razrayda+03H
+022E AA00     F     1458             MOV     R2,ves_razrayda+02H
+0230 A900     F     1459             MOV     R1,ves_razrayda+01H
+0232 A800     F     1460             MOV     R0,ves_razrayda
+0234 120000   F     1461             LCALL   ?C?FPDIV
+0237 120000   F     1462             LCALL   ?C?CASTF
+023A EE             1463             MOV     A,R6
+023B 33             1464             RLC     A
+023C 95E0           1465             SUBB    A,ACC
+023E 8F00     F     1466             MOV     dac_peremen+03H,R7
+0240 8E00     F     1467             MOV     dac_peremen+02H,R6
+0242 F500     F     1468             MOV     dac_peremen+01H,A
+0244 F500     F     1469             MOV     dac_peremen,A
+                    1470     ;    if(dac_peremen>0x0E66)
+                    1471                             ; SOURCE LINE # 232
+0246 E4             1472             CLR     A
+0247 7F66           1473             MOV     R7,#066H
+0249 7E0E           1474             MOV     R6,#0EH
+024B FD             1475             MOV     R5,A
+024C FC             1476             MOV     R4,A
+024D AB00     F     1477             MOV     R3,dac_peremen+03H
+024F AA00     F     1478             MOV     R2,dac_peremen+02H
+0251 A900     F     1479             MOV     R1,dac_peremen+01H
+0253 A800     F     1480             MOV     R0,dac_peremen
+0255 D3             1481             SETB    C
+0256 120000   F     1482             LCALL   ?C?SLCMP
+0259 400B           1483             JC      ?C0022
+                    1484     ;     dac_peremen=0x0E66;
+                    1485                             ; SOURCE LINE # 233
+025B E4             1486             CLR     A
+025C 750066   F     1487             MOV     dac_peremen+03H,#066H
+025F 75000E   F     1488             MOV     dac_peremen+02H,#0EH
+0262 F500     F     1489             MOV     dac_peremen+01H,A
+0264 F500     F     1490             MOV     dac_peremen,A
+0266                1491     ?C0022:
+                    1492     ;    if(dac_peremen<0x0031)
+                    1493                             ; SOURCE LINE # 234
+0266 E4             1494             CLR     A
+0267 7F31           1495             MOV     R7,#031H
+0269 FE             1496             MOV     R6,A
+026A FD             1497             MOV     R5,A
+026B FC             1498             MOV     R4,A
+026C AB00     F     1499             MOV     R3,dac_peremen+03H
+026E AA00     F     1500             MOV     R2,dac_peremen+02H
+0270 A900     F     1501             MOV     R1,dac_peremen+01H
+0272 A800     F     1502             MOV     R0,dac_peremen
+0274 C3             1503             CLR     C
+0275 120000   F     1504             LCALL   ?C?SLCMP
+A51 MACRO ASSEMBLER  Z2                                                                   10/19/2005 09:24:03 PAGE    24
+
+0278 500A           1505             JNC     ?C0023
+                    1506     ;     dac_peremen=0x0031;
+                    1507                             ; SOURCE LINE # 235
+027A E4             1508             CLR     A
+027B 750031   F     1509             MOV     dac_peremen+03H,#031H
+027E F500     F     1510             MOV     dac_peremen+02H,A
+0280 F500     F     1511             MOV     dac_peremen+01H,A
+0282 F500     F     1512             MOV     dac_peremen,A
+0284                1513     ?C0023:
+                    1514     ;    DAC0H=(dac_peremen&0x00000F00)>>8;
+                    1515                             ; SOURCE LINE # 236
+0284 E4             1516             CLR     A
+0285 FF             1517             MOV     R7,A
+0286 E500     F     1518             MOV     A,dac_peremen+02H
+0288 540F           1519             ANL     A,#0FH
+028A FE             1520             MOV     R6,A
+028B E4             1521             CLR     A
+028C FD             1522             MOV     R5,A
+028D FC             1523             MOV     R4,A
+028E 7808           1524             MOV     R0,#08H
+0290 120000   F     1525             LCALL   ?C?SLSHR
+0293 8FFA           1526             MOV     DAC0H,R7
+                    1527     ;    DAC0L=(dac_peremen&0x000000FF);
+                    1528                             ; SOURCE LINE # 237
+0295 E500     F     1529             MOV     A,dac_peremen+03H
+0297 FF             1530             MOV     R7,A
+0298 8FF9           1531             MOV     DAC0L,R7
+                    1532     ;    DACCON=0x0D;
+                    1533                             ; SOURCE LINE # 238
+029A 75FD0D         1534             MOV     DACCON,#0DH
+                    1535     ;    dac_gotov=0;
+                    1536                             ; SOURCE LINE # 239
+029D C200     F     1537             CLR     dac_gotov
+                    1538     ; 
+                    1539     ;    //TH2=RCAP2H;       // 100 микросекунд
+                    1540     ;    //TL2=RCAP2L;
+                    1541     ; 
+                    1542     ;    //TH1=0x82;                           // период 0.002
+                    1543     ;    //TL1=0xFF;
+                    1544     ; 
+                    1545     ;    //TR2=1; //включение Timer2
+                    1546     ;    //TR1=1; //включение Timer1
+                    1547     ;       }
+                    1548                             ; SOURCE LINE # 249
+                    1549     ; }
+                    1550                             ; SOURCE LINE # 250
+029F 020000   F     1551             LJMP    ?C0017
+                    1552     ; END OF main
+                    1553     
+                    1554             END
+A51 MACRO ASSEMBLER  Z2                                                                   10/19/2005 09:24:03 PAGE    25
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+?BI?Z2 . . . . . .  B SEG    0007H       REL=UNIT
+?C0003 . . . . . .  C ADDR   0018H   R   SEG=?PR?_TR2_?Z2
+?C0006 . . . . . .  C ADDR   002CH   R   SEG=?PR?_TR1_?Z2
+?C0007 . . . . . .  C ADDR   0023H   R   SEG=?PR?_TR1_?Z2
+?C0009 . . . . . .  C ADDR   0034H   R   SEG=?PR?_TR1_?Z2
+?C0010 . . . . . .  C ADDR   003BH   R   SEG=?PR?_ADC_?Z2
+?C0011 . . . . . .  C ADDR   0054H   R   SEG=?PR?_ADC_?Z2
+?C0013 . . . . . .  C ADDR   008DH   R   SEG=?PR?_ADC_?Z2
+?C0014 . . . . . .  C ADDR   00A7H   R   SEG=?PR?_ADC_?Z2
+?C0015 . . . . . .  C ADDR   0054H   R   SEG=?PR?MAIN?Z2
+?C0016 . . . . . .  C ADDR   006BH   R   SEG=?PR?MAIN?Z2
+?C0017 . . . . . .  C ADDR   018CH   R   SEG=?PR?MAIN?Z2
+?C0019 . . . . . .  C ADDR   01A8H   R   SEG=?PR?MAIN?Z2
+?C0020 . . . . . .  C ADDR   01C5H   R   SEG=?PR?MAIN?Z2
+?C0022 . . . . . .  C ADDR   0266H   R   SEG=?PR?MAIN?Z2
+?C0023 . . . . . .  C ADDR   0284H   R   SEG=?PR?MAIN?Z2
+?C0025 . . . . . .  C ADDR   001AH   R   SEG=?PR?_TR1_?Z2
+?C0026 . . . . . .  C ADDR   0034H   R   SEG=?PR?_TR1_?Z2
+?C?CASTF . . . . .  C ADDR   -----       EXT
+?C?CHKFLOAT. . . .  C ADDR   -----       EXT
+?C?FCASTI. . . . .  C ADDR   -----       EXT
+?C?FPADD . . . . .  C ADDR   -----       EXT
+?C?FPDIV . . . . .  C ADDR   -----       EXT
+?C?FPMUL . . . . .  C ADDR   -----       EXT
+?C?FPSUB . . . . .  C ADDR   -----       EXT
+?C?LLDXDATA. . . .  C ADDR   -----       EXT
+?C?LLDXDATA0 . . .  C ADDR   -----       EXT
+?C?LSTKXDATA . . .  C ADDR   -----       EXT
+?C?LSTXDATA. . . .  C ADDR   -----       EXT
+?C?SLCMP . . . . .  C ADDR   -----       EXT
+?C?SLSHR . . . . .  C ADDR   -----       EXT
+?C?UIDIV . . . . .  C ADDR   -----       EXT
+?C?ULSHR . . . . .  C ADDR   -----       EXT
+?C_INITSEG . . . .  C SEG    0098H       REL=UNIT
+?C_STARTUP . . . .  C ADDR   -----       EXT
+?DT?Z2 . . . . . .  D SEG    0022H       REL=UNIT
+?ID?Z2 . . . . . .  I SEG    000EH       REL=UNIT
+?PR?MAIN?Z2. . . .  C SEG    02A2H       REL=UNIT
+?PR?_ADC_?Z2 . . .  C SEG    00BBH       REL=UNIT
+?PR?_INT0_?Z2. . .  C SEG    0081H       REL=UNIT
+?PR?_INT1_?Z2. . .  C SEG    0081H       REL=UNIT
+?PR?_TR0_?Z2 . . .  C SEG    000DH       REL=UNIT
+?PR?_TR1_?Z2 . . .  C SEG    003DH       REL=UNIT
+?PR?_TR2_?Z2 . . .  C SEG    001FH       REL=UNIT
+?XD?Z2 . . . . . .  X SEG    001CH       REL=UNIT
+?_FLASH_READ?BYTE.  D ADDR   -----       EXT
+?_FLASH_WRITE?BYTE  D ADDR   -----       EXT
+AC . . . . . . . .  B ADDR   00D0H.6 A   
+ACC. . . . . . . .  D ADDR   00E0H   A   
+ADCCON1. . . . . .  D ADDR   00EFH   A   
+ADCCON2. . . . . .  D ADDR   00D8H   A   
+ADCCON3. . . . . .  D ADDR   00F5H   A   
+ADCDATAH . . . . .  D ADDR   00DAH   A   
+ADCDATAL . . . . .  D ADDR   00D9H   A   
+ADCGAINH . . . . .  D ADDR   00F4H   A   
+ADCGAINL . . . . .  D ADDR   00F3H   A   
+ADCI . . . . . . .  B ADDR   00D8H.7 A   
+ADCOFSH. . . . . .  D ADDR   00F2H   A   
+ADCOFSL. . . . . .  D ADDR   00F1H   A   
+B. . . . . . . . .  D ADDR   00F0H   A   
+A51 MACRO ASSEMBLER  Z2                                                                   10/19/2005 09:24:03 PAGE    26
+
+CAP2 . . . . . . .  B ADDR   00C8H.0 A   
+CCONV. . . . . . .  B ADDR   00D8H.5 A   
+CFG841 . . . . . .  D ADDR   00AFH   A   
+CHIPID . . . . . .  D ADDR   00C2H   A   
+CNT2 . . . . . . .  B ADDR   00C8H.1 A   
+COS. . . . . . . .  D ADDR   0008H   R   SEG=?DT?Z2
+CPHA . . . . . . .  B ADDR   00F8H.2 A   
+CPOL . . . . . . .  B ADDR   00F8H.3 A   
+CS0. . . . . . . .  B ADDR   00D8H.0 A   
+CS1. . . . . . . .  B ADDR   00D8H.1 A   
+CS2. . . . . . . .  B ADDR   00D8H.2 A   
+CS3. . . . . . . .  B ADDR   00D8H.3 A   
+CY . . . . . . . .  B ADDR   00D0H.7 A   
+D0 . . . . . . . .  B ADDR   00E8H.5 A   
+D0EN . . . . . . .  B ADDR   00E8H.3 A   
+D1 . . . . . . . .  B ADDR   00E8H.7 A   
+D1EN . . . . . . .  B ADDR   00E8H.6 A   
+DAC0H. . . . . . .  D ADDR   00FAH   A   
+DAC0L. . . . . . .  D ADDR   00F9H   A   
+DAC1H. . . . . . .  D ADDR   00FCH   A   
+DAC1L. . . . . . .  D ADDR   00FBH   A   
+DACCON . . . . . .  D ADDR   00FDH   A   
+DAC_GOTOV. . . . .  B ADDR   0000H.1 R   SEG=?BI?Z2
+DAC_OUT. . . . . .  B ADDR   0000H.6 R   SEG=?BI?Z2
+DAC_PEREMEN. . . .  D ADDR   001EH   R   SEG=?DT?Z2
+DAC_PERIOD . . . .  I ADDR   0000H   R   SEG=?ID?Z2
+DAC_SEC. . . . . .  I ADDR   0004H   R   SEG=?ID?Z2
+DCON . . . . . . .  D ADDR   00E8H   A   
+DELTA. . . . . . .  D ADDR   000CH   R   SEG=?DT?Z2
+DMA. . . . . . . .  B ADDR   00D8H.6 A   
+DMAH . . . . . . .  D ADDR   00D3H   A   
+DMAL . . . . . . .  D ADDR   00D2H   A   
+DMAP . . . . . . .  D ADDR   00D4H   A   
+DPCON. . . . . . .  D ADDR   00A7H   A   
+DPH. . . . . . . .  D ADDR   0083H   A   
+DPL. . . . . . . .  D ADDR   0082H   A   
+DPP. . . . . . . .  D ADDR   0084H   A   
+EA . . . . . . . .  B ADDR   00A8H.7 A   
+EADC . . . . . . .  B ADDR   00A8H.6 A   
+EADRH. . . . . . .  D ADDR   00C7H   A   
+EADRL. . . . . . .  D ADDR   00C6H   A   
+ECON . . . . . . .  D ADDR   00B9H   A   
+EDATA1 . . . . . .  D ADDR   00BCH   A   
+EDATA2 . . . . . .  D ADDR   00BDH   A   
+EDATA3 . . . . . .  D ADDR   00BEH   A   
+EDATA4 . . . . . .  D ADDR   00BFH   A   
+ES . . . . . . . .  B ADDR   00A8H.4 A   
+ET0. . . . . . . .  B ADDR   00A8H.1 A   
+ET1. . . . . . . .  B ADDR   00A8H.3 A   
+ET2. . . . . . . .  B ADDR   00A8H.5 A   
+EX0. . . . . . . .  B ADDR   00A8H.0 A   
+EX1. . . . . . . .  B ADDR   00A8H.2 A   
+EXEN2. . . . . . .  B ADDR   00C8H.3 A   
+EXF2 . . . . . . .  B ADDR   00C8H.6 A   
+F0 . . . . . . . .  B ADDR   00D0H.5 A   
+F1 . . . . . . . .  B ADDR   00D0H.1 A   
+GOTOV. . . . . . .  B ADDR   0000H.0 R   SEG=?BI?Z2
+HOUR . . . . . . .  D ADDR   00A5H   A   
+HTHSEC . . . . . .  D ADDR   00A2H   A   
+I2CADD . . . . . .  D ADDR   009BH   A   
+I2CADD1. . . . . .  D ADDR   0091H   A   
+I2CADD2. . . . . .  D ADDR   0092H   A   
+I2CADD3. . . . . .  D ADDR   0093H   A   
+I2CCON . . . . . .  D ADDR   00E8H   A   
+I2CDAT . . . . . .  D ADDR   009AH   A   
+I2CI . . . . . . .  B ADDR   00E8H.0 A   
+A51 MACRO ASSEMBLER  Z2                                                                   10/19/2005 09:24:03 PAGE    27
+
+I2CM . . . . . . .  B ADDR   00E8H.3 A   
+I2CRS. . . . . . .  B ADDR   00E8H.2 A   
+I2CTX. . . . . . .  B ADDR   00E8H.1 A   
+IE . . . . . . . .  D ADDR   00A8H   A   
+IE0. . . . . . . .  B ADDR   0088H.1 A   
+IE1. . . . . . . .  B ADDR   0088H.3 A   
+IEIP2. . . . . . .  D ADDR   00A9H   A   
+INT0 . . . . . . .  B ADDR   00B0H.2 A   
+INT1 . . . . . . .  B ADDR   00B0H.3 A   
+INTERVAL . . . . .  X ADDR   0014H   R   SEG=?XD?Z2
+INTVAL . . . . . .  D ADDR   00A6H   A   
+IP . . . . . . . .  D ADDR   00B8H   A   
+ISPI . . . . . . .  B ADDR   00F8H.7 A   
+IT0. . . . . . . .  B ADDR   0088H.0 A   
+IT1. . . . . . . .  B ADDR   0088H.2 A   
+KOEF_USILENIYA . .  X ADDR   0018H   R   SEG=?XD?Z2
+KOL_SIEMOV . . . .  D ADDR   0010H   R   SEG=?DT?Z2
+MAIN . . . . . . .  C ADDR   0000H   R   SEG=?PR?MAIN?Z2
+MCO. . . . . . . .  B ADDR   00E8H.5 A   
+MDE. . . . . . . .  B ADDR   00E8H.6 A   
+MDI. . . . . . . .  B ADDR   00E8H.4 A   
+MDO. . . . . . . .  B ADDR   00E8H.7 A   
+MIN. . . . . . . .  D ADDR   00A4H   A   
+N. . . . . . . . .  X ADDR   0004H   R   SEG=?XD?Z2
+NIJNIY_PRIDEL. . .  X ADDR   0010H   R   SEG=?XD?Z2
+OV . . . . . . . .  B ADDR   00D0H.2 A   
+P. . . . . . . . .  B ADDR   00D0H.0 A   
+P0 . . . . . . . .  D ADDR   0080H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+P3 . . . . . . . .  D ADDR   00B0H   A   
+PADC . . . . . . .  B ADDR   00B8H.6 A   
+PCON . . . . . . .  D ADDR   0087H   A   
+PERIOD . . . . . .  D ADDR   0012H   R   SEG=?DT?Z2
+PERIOD_FAZI. . . .  X ADDR   0008H   R   SEG=?XD?Z2
+PERIOD_ZADERJKI. .  X ADDR   000AH   R   SEG=?XD?Z2
+PIT. . . . . . . .  B ADDR   0000H.2 R   SEG=?BI?Z2
+PRE0 . . . . . . .  B ADDR   00C0H.4 A   
+PRE1 . . . . . . .  B ADDR   00C0H.5 A   
+PRE2 . . . . . . .  B ADDR   00C0H.6 A   
+PRE3 . . . . . . .  B ADDR   00C0H.7 A   
+PS . . . . . . . .  B ADDR   00B8H.4 A   
+PSI. . . . . . . .  B ADDR   00B8H.7 A   
+PSMCON . . . . . .  D ADDR   00DFH   A   
+PSW. . . . . . . .  D ADDR   00D0H   A   
+PT0. . . . . . . .  B ADDR   00B8H.1 A   
+PT1. . . . . . . .  B ADDR   00B8H.3 A   
+PT2. . . . . . . .  B ADDR   00B8H.5 A   
+PWM0H. . . . . . .  D ADDR   00B2H   A   
+PWM0L. . . . . . .  D ADDR   00B1H   A   
+PWM1H. . . . . . .  D ADDR   00B4H   A   
+PWM1L. . . . . . .  D ADDR   00B3H   A   
+PWMCON . . . . . .  D ADDR   00AEH   A   
+PX0. . . . . . . .  B ADDR   00B8H.0 A   
+PX1. . . . . . . .  B ADDR   00B8H.2 A   
+RB8. . . . . . . .  B ADDR   0098H.2 A   
+RCAP2H . . . . . .  D ADDR   00CBH   A   
+RCAP2L . . . . . .  D ADDR   00CAH   A   
+RCLK . . . . . . .  B ADDR   00C8H.5 A   
+RD . . . . . . . .  B ADDR   00B0H.7 A   
+REN. . . . . . . .  B ADDR   0098H.4 A   
+RI . . . . . . . .  B ADDR   0098H.0 A   
+RS0. . . . . . . .  B ADDR   00D0H.3 A   
+RS1. . . . . . . .  B ADDR   00D0H.4 A   
+RXD. . . . . . . .  B ADDR   00B0H.0 A   
+SBUF . . . . . . .  D ADDR   0099H   A   
+A51 MACRO ASSEMBLER  Z2                                                                   10/19/2005 09:24:03 PAGE    28
+
+SCHET_DAC. . . . .  I ADDR   0002H   R   SEG=?ID?Z2
+SCHET_UART . . . .  D ADDR   0014H   R   SEG=?DT?Z2
+SCON . . . . . . .  D ADDR   0098H   A   
+SCONV. . . . . . .  B ADDR   00D8H.4 A   
+SEC. . . . . . . .  D ADDR   00A3H   A   
+SIN. . . . . . . .  D ADDR   0004H   R   SEG=?DT?Z2
+SM0. . . . . . . .  B ADDR   0098H.7 A   
+SM1. . . . . . . .  B ADDR   0098H.6 A   
+SM2. . . . . . . .  B ADDR   0098H.5 A   
+SP . . . . . . . .  D ADDR   0081H   A   
+SPE. . . . . . . .  B ADDR   00F8H.5 A   
+SPH. . . . . . . .  D ADDR   00B7H   A   
+SPICON . . . . . .  D ADDR   00F8H   A   
+SPIDAT . . . . . .  D ADDR   00F7H   A   
+SPIM . . . . . . .  B ADDR   00F8H.4 A   
+SPR0 . . . . . . .  B ADDR   00F8H.0 A   
+SPR1 . . . . . . .  B ADDR   00F8H.1 A   
+T0 . . . . . . . .  B ADDR   00B0H.4 A   
+T1 . . . . . . . .  B ADDR   00B0H.5 A   
+T2 . . . . . . . .  B ADDR   0090H.0 A   
+T2CON. . . . . . .  D ADDR   00C8H   A   
+T2EX . . . . . . .  B ADDR   0090H.1 A   
+T3CON. . . . . . .  D ADDR   009EH   A   
+T3FD . . . . . . .  D ADDR   009DH   A   
+TB8. . . . . . . .  B ADDR   0098H.3 A   
+TCLK . . . . . . .  B ADDR   00C8H.4 A   
+TCON . . . . . . .  D ADDR   0088H   A   
+TF0. . . . . . . .  B ADDR   0088H.5 A   
+TF1. . . . . . . .  B ADDR   0088H.7 A   
+TF2. . . . . . . .  B ADDR   00C8H.7 A   
+TH0. . . . . . . .  D ADDR   008CH   A   
+TH1. . . . . . . .  D ADDR   008DH   A   
+TH2. . . . . . . .  D ADDR   00CDH   A   
+TI . . . . . . . .  B ADDR   0098H.1 A   
+TIMECON. . . . . .  D ADDR   00A1H   A   
+TIM_H_0. . . . . .  D ADDR   0000H   R   SEG=?DT?Z2
+TIM_L_0. . . . . .  D ADDR   0002H   R   SEG=?DT?Z2
+TL0. . . . . . . .  D ADDR   008AH   A   
+TL1. . . . . . . .  D ADDR   008BH   A   
+TL2. . . . . . . .  D ADDR   00CCH   A   
+TMOD . . . . . . .  D ADDR   0089H   A   
+TR0. . . . . . . .  B ADDR   0088H.4 A   
+TR1. . . . . . . .  B ADDR   0088H.6 A   
+TR2. . . . . . . .  B ADDR   00C8H.2 A   
+TXD. . . . . . . .  B ADDR   00B0H.1 A   
+UART_PEREM . . . .  D ADDR   001AH   R   SEG=?DT?Z2
+USRED_COS. . . . .  I ADDR   0008H   R   SEG=?ID?Z2
+USRED_COS_DAC. . .  I ADDR   000CH   R   SEG=?ID?Z2
+USRED_SIN. . . . .  I ADDR   0006H   R   SEG=?ID?Z2
+USRED_SIN_DAC. . .  I ADDR   000AH   R   SEG=?ID?Z2
+UST_KOL_SIEMOV . .  D ADDR   0011H   R   SEG=?DT?Z2
+V. . . . . . . . .  X ADDR   0000H   R   SEG=?XD?Z2
+VERHNIY_PRIDEL . .  X ADDR   000CH   R   SEG=?XD?Z2
+VES_RAZRAYDA . . .  D ADDR   0016H   R   SEG=?DT?Z2
+VX . . . . . . . .  B ADDR   0000H.3 R   SEG=?BI?Z2
+WCOL . . . . . . .  B ADDR   00F8H.6 A   
+WDCON. . . . . . .  D ADDR   00C0H   A   
+WDE. . . . . . . .  B ADDR   00C0H.1 A   
+WDIR . . . . . . .  B ADDR   00C0H.3 A   
+WDS. . . . . . . .  B ADDR   00C0H.2 A   
+WDWR . . . . . . .  B ADDR   00C0H.0 A   
+WR . . . . . . . .  B ADDR   00B0H.6 A   
+WRITE_FLASH_NIZ. .  B ADDR   0000H.5 R   SEG=?BI?Z2
+WRITE_FLASH_VERH .  B ADDR   0000H.4 R   SEG=?BI?Z2
+Z2 . . . . . . . .  N NUMB   -----       
+_ADC_. . . . . . .  C ADDR   0000H   R   SEG=?PR?_ADC_?Z2
+A51 MACRO ASSEMBLER  Z2                                                                   10/19/2005 09:24:03 PAGE    29
+
+_FLASH_READ. . . .  C ADDR   -----       EXT
+_FLASH_WRITE . . .  C ADDR   -----       EXT
+_INT0_ . . . . . .  C ADDR   0000H   R   SEG=?PR?_INT0_?Z2
+_INT1_ . . . . . .  C ADDR   0000H   R   SEG=?PR?_INT1_?Z2
+_TR0_. . . . . . .  C ADDR   0000H   R   SEG=?PR?_TR0_?Z2
+_TR1_. . . . . . .  C ADDR   0000H   R   SEG=?PR?_TR1_?Z2
+_TR2_. . . . . . .  C ADDR   0000H   R   SEG=?PR?_TR2_?Z2
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

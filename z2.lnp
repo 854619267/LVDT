@@ -1,0 +1,6 @@
+"START_AD.obj",
+"z2.obj",
+"f_read.obj",
+"f_write.obj" 
+TO "z2" REGFILE (.\z2.ORC) 
+RAMSIZE(256) 

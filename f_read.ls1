@@ -1,0 +1,705 @@
+A51 MACRO ASSEMBLER  F_READ                                                               10/19/2005 09:24:03 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.00b
+OBJECT MODULE PLACED IN f_read.OBJ
+ASSEMBLER INVOKED BY: C:\Keil\C51\BIN\A51.EXE f_read.src PR(.\f_read.ls1) EP DEBUG
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     ; .\f_read.SRC generated from: f_read.c
+                       2     ; COMPILER INVOKED BY:
+                       3     ;        C:\Keil\C51\BIN\C51.EXE f_read.c OPTIMIZE(SIZE) REGFILE(.\z2.ORC) BROWSE ORDER DEB
+                             UG OBJECTEXTEND SRC(.\f_read.SRC)
+                       4     
+                       5     $nomod51 
+                       6     
+                       7     NAME    F_READ
+                       8     
+  0080                 9     P0      DATA    080H
+  0081                10     SP      DATA    081H
+  0082                11     DPL     DATA    082H
+  0083                12     DPH     DATA    083H
+  0084                13     DPP     DATA    084H
+  0087                14     PCON    DATA    087H
+  0088                15     TCON    DATA    088H
+  0089                16     TMOD    DATA    089H
+  008A                17     TL0     DATA    08AH
+  008B                18     TL1     DATA    08BH
+  008C                19     TH0     DATA    08CH
+  008D                20     TH1     DATA    08DH
+  0090                21     P1      DATA    090H
+  0091                22     I2CADD1 DATA    091H
+  0092                23     I2CADD2 DATA    092H
+  0093                24     I2CADD3 DATA    093H
+  0098                25     SCON    DATA    098H
+  0099                26     SBUF    DATA    099H
+  009A                27     I2CDAT  DATA    09AH
+  009B                28     I2CADD  DATA    09BH
+  009D                29     T3FD    DATA    09DH
+  009E                30     T3CON   DATA    09EH
+  00A0                31     P2      DATA    0A0H
+  00A1                32     TIMECON DATA    0A1H
+  00A2                33     HTHSEC  DATA    0A2H
+  00A3                34     SEC     DATA    0A3H
+  00A4                35     MIN     DATA    0A4H
+  00A5                36     HOUR    DATA    0A5H
+  00A6                37     INTVAL  DATA    0A6H
+  00A7                38     DPCON   DATA    0A7H
+  00A8                39     IE      DATA    0A8H
+  00A9                40     IEIP2   DATA    0A9H
+  00AE                41     PWMCON  DATA    0AEH
+  00AF                42     CFG842  DATA    0AFH
+  00B0                43     P3      DATA    0B0H
+  00B1                44     PWM0L   DATA    0B1H
+  00B2                45     PWM0H   DATA    0B2H
+  00B3                46     PWM1L   DATA    0B3H
+  00B4                47     PWM1H   DATA    0B4H
+  00B7                48     SPH     DATA    0B7H
+  00B8                49     IP      DATA    0B8H
+  00B9                50     ECON    DATA    0B9H
+  00BC                51     EDATA1  DATA    0BCH
+  00BD                52     EDATA2  DATA    0BDH
+  00BE                53     EDATA3  DATA    0BEH
+  00BF                54     EDATA4  DATA    0BFH
+  00C0                55     WDCON   DATA    0C0H
+  00C2                56     CHIPID  DATA    0C2H
+  00C6                57     EADRL   DATA    0C6H
+A51 MACRO ASSEMBLER  F_READ                                                               10/19/2005 09:24:03 PAGE     2
+
+  00C7                58     EADRH   DATA    0C7H
+  00C8                59     T2CON   DATA    0C8H
+  00CA                60     RCAP2L  DATA    0CAH
+  00CB                61     RCAP2H  DATA    0CBH
+  00CC                62     TL2     DATA    0CCH
+  00CD                63     TH2     DATA    0CDH
+  00D0                64     PSW     DATA    0D0H
+  00D2                65     DMAL    DATA    0D2H
+  00D3                66     DMAH    DATA    0D3H
+  00D4                67     DMAP    DATA    0D4H
+  00D7                68     PLLCON  DATA    0D7H
+  00D8                69     ADCCON2 DATA    0D8H
+  00D9                70     ADCDATAL        DATA    0D9H
+  00DA                71     ADCDATAH        DATA    0DAH
+  00DF                72     PSMCON  DATA    0DFH
+  00E0                73     ACC     DATA    0E0H
+  00E8                74     DCON    DATA    0E8H
+  00E8                75     I2CCON  DATA    0E8H
+  00EF                76     ADCCON1 DATA    0EFH
+  00F0                77     B       DATA    0F0H
+  00F1                78     ADCOFSL DATA    0F1H
+  00F2                79     ADCOFSH DATA    0F2H
+  00F3                80     ADCGAINL        DATA    0F3H
+  00F4                81     ADCGAINH        DATA    0F4H
+  00F5                82     ADCCON3 DATA    0F5H
+  00F7                83     SPIDAT  DATA    0F7H
+  00F8                84     SPICON  DATA    0F8H
+  00F9                85     DAC0L   DATA    0F9H
+  00FA                86     DAC0H   DATA    0FAH
+  00FB                87     DAC1L   DATA    0FBH
+  00FC                88     DAC1H   DATA    0FCH
+  00FD                89     DACCON  DATA    0FDH
+  008F                90     TF1     BIT     088H.7
+  008E                91     TR1     BIT     088H.6
+  008D                92     TF0     BIT     088H.5
+  008C                93     TR0     BIT     088H.4
+  008B                94     IE1     BIT     088H.3
+  008A                95     IT1     BIT     088H.2
+  0089                96     IE0     BIT     088H.1
+  0088                97     IT0     BIT     088H.0
+  0091                98     T2EX    BIT     090H.1
+  0090                99     T2      BIT     090H.0
+  009F               100     SM0     BIT     098H.7
+  009E               101     SM1     BIT     098H.6
+  009D               102     SM2     BIT     098H.5
+  009C               103     REN     BIT     098H.4
+  009B               104     TB8     BIT     098H.3
+  009A               105     RB8     BIT     098H.2
+  0099               106     TI      BIT     098H.1
+  0098               107     RI      BIT     098H.0
+  00AF               108     EA      BIT     0A8H.7
+  00AE               109     EADC    BIT     0A8H.6
+  00AD               110     ET2     BIT     0A8H.5
+  00AC               111     ES      BIT     0A8H.4
+  00AB               112     ET1     BIT     0A8H.3
+  00AA               113     EX1     BIT     0A8H.2
+  00A9               114     ET0     BIT     0A8H.1
+  00A8               115     EX0     BIT     0A8H.0
+  00B7               116     RD      BIT     0B0H.7
+  00B6               117     WR      BIT     0B0H.6
+  00B5               118     T1      BIT     0B0H.5
+  00B4               119     T0      BIT     0B0H.4
+  00B3               120     INT1    BIT     0B0H.3
+  00B2               121     INT0    BIT     0B0H.2
+  00B1               122     TXD     BIT     0B0H.1
+  00B0               123     RXD     BIT     0B0H.0
+A51 MACRO ASSEMBLER  F_READ                                                               10/19/2005 09:24:03 PAGE     3
+
+  00BF               124     PSI     BIT     0B8H.7
+  00BE               125     PADC    BIT     0B8H.6
+  00BD               126     PT2     BIT     0B8H.5
+  00BC               127     PS      BIT     0B8H.4
+  00BB               128     PT1     BIT     0B8H.3
+  00BA               129     PX1     BIT     0B8H.2
+  00B9               130     PT0     BIT     0B8H.1
+  00B8               131     PX0     BIT     0B8H.0
+  00C7               132     PRE3    BIT     0C0H.7
+  00C6               133     PRE2    BIT     0C0H.6
+  00C5               134     PRE1    BIT     0C0H.5
+  00C4               135     PRE0    BIT     0C0H.4
+  00C3               136     WDIR    BIT     0C0H.3
+  00C2               137     WDS     BIT     0C0H.2
+  00C1               138     WDE     BIT     0C0H.1
+  00C0               139     WDWR    BIT     0C0H.0
+  00CF               140     TF2     BIT     0C8H.7
+  00CE               141     EXF2    BIT     0C8H.6
+  00CD               142     RCLK    BIT     0C8H.5
+  00CC               143     TCLK    BIT     0C8H.4
+  00CB               144     EXEN2   BIT     0C8H.3
+  00CA               145     TR2     BIT     0C8H.2
+  00C9               146     CNT2    BIT     0C8H.1
+  00C8               147     CAP2    BIT     0C8H.0
+  00D7               148     CY      BIT     0D0H.7
+  00D6               149     AC      BIT     0D0H.6
+  00D5               150     F0      BIT     0D0H.5
+  00D4               151     RS1     BIT     0D0H.4
+  00D3               152     RS0     BIT     0D0H.3
+  00D2               153     OV      BIT     0D0H.2
+  00D1               154     F1      BIT     0D0H.1
+  00D0               155     P       BIT     0D0H.0
+  00DF               156     ADCI    BIT     0D8H.7
+  00DE               157     DMA     BIT     0D8H.6
+  00DD               158     CCONV   BIT     0D8H.5
+  00DC               159     SCONV   BIT     0D8H.4
+  00DB               160     CS3     BIT     0D8H.3
+  00DA               161     CS2     BIT     0D8H.2
+  00D9               162     CS1     BIT     0D8H.1
+  00D8               163     CS0     BIT     0D8H.0
+  00EF               164     D1      BIT     0E8H.7
+  00EE               165     D1EN    BIT     0E8H.6
+  00ED               166     D0      BIT     0E8H.5
+  00EB               167     D0EN    BIT     0E8H.3
+  00EF               168     MDO     BIT     0E8H.7
+  00EE               169     MDE     BIT     0E8H.6
+  00ED               170     MCO     BIT     0E8H.5
+  00EC               171     MDI     BIT     0E8H.4
+  00EB               172     I2CM    BIT     0E8H.3
+  00EA               173     I2CRS   BIT     0E8H.2
+  00E9               174     I2CTX   BIT     0E8H.1
+  00E8               175     I2CI    BIT     0E8H.0
+  00FF               176     ISPI    BIT     0F8H.7
+  00FE               177     WCOL    BIT     0F8H.6
+  00FD               178     SPE     BIT     0F8H.5
+  00FC               179     SPIM    BIT     0F8H.4
+  00FB               180     CPOL    BIT     0F8H.3
+  00FA               181     CPHA    BIT     0F8H.2
+  00F9               182     SPR1    BIT     0F8H.1
+  00F8               183     SPR0    BIT     0F8H.0
+                     184     ?PR?_flash_read?F_READ                   SEGMENT CODE 
+                     185     ?DT?_flash_read?F_READ                   SEGMENT DATA OVERLAYABLE 
+                     186             EXTRN   CODE (?C?ULCMP)
+                     187             EXTRN   CODE (?C?CSTOPTR)
+                     188             PUBLIC  ?_flash_read?BYTE
+                     189             PUBLIC  _flash_read
+A51 MACRO ASSEMBLER  F_READ                                                               10/19/2005 09:24:03 PAGE     4
+
+                     190     
+----                 191             RSEG  ?DT?_flash_read?F_READ
+0000                 192     ?_flash_read?BYTE:
+0001                 193             ORG  1
+0001                 194          buffer?040:   DS   3
+0003                 195             ORG  3
+0003                 196             len?041:   DS   4
+0007                 197             ORG  7
+0007                 198         address?042:   DS   4
+000B                 199             ORG  11
+000B                 200               s?043:   DS   3
+000E                 201             ORG  14
+000E                 202               i?044:   DS   4
+0012                 203             ORG  18
+0012                 204            addr?045:   DS   2
+                     205     ; #include <ADUC842.H>
+                     206     ; #include "f_adi.h"
+                     207     ; 
+                     208     ; /*---------------------------------------------------------
+                     209     ; ---------------------------------------------------------*/
+                     210     ; //#pragma NOAR
+                     211     ; unsigned long flash_read (
+                     212     
+----                 213             RSEG  ?PR?_flash_read?F_READ
+0000                 214     _flash_read:
+                     215             USING   0
+                     216                             ; SOURCE LINE # 7
+0000 8F00     F      217             MOV     len?041+03H,R7
+0002 8E00     F      218             MOV     len?041+02H,R6
+0004 8D00     F      219             MOV     len?041+01H,R5
+0006 8C00     F      220             MOV     len?041,R4
+                     221     ;---- Variable 'buffer?040' assigned to Register 'R1/R2/R3' ----
+                     222     ;   void *buffer,            /* Buffer to fill */
+                     223     ;   unsigned long len,       /* Bytes to read */
+                     224     ;   unsigned long address)   /* FLASH address to read from */
+                     225     ; {
+                     226                             ; SOURCE LINE # 11
+                     227     ; unsigned char *s = buffer;
+                     228                             ; SOURCE LINE # 12
+0008 8B00     F      229             MOV     s?043,R3
+000A 8A00     F      230             MOV     s?043+01H,R2
+000C 8900     F      231             MOV     s?043+02H,R1
+                     232     ; unsigned long i;
+                     233     ; unsigned int addr;
+                     234     ; 
+                     235     ; /*-------------------------------------
+                     236     ; If the address is too big, exit.
+                     237     ; --------------------------------------*/
+                     238     ; if (address >= ADI_EEMEM_SIZE)
+                     239                             ; SOURCE LINE # 19
+000E E4              240             CLR     A
+000F 7F80            241             MOV     R7,#080H
+0011 7E02            242             MOV     R6,#02H
+0013 FD              243             MOV     R5,A
+0014 FC              244             MOV     R4,A
+0015 AB00     F      245             MOV     R3,address?042+03H
+0017 AA00     F      246             MOV     R2,address?042+02H
+0019 A900     F      247             MOV     R1,address?042+01H
+001B A800     F      248             MOV     R0,address?042
+001D C3              249             CLR     C
+001E 120000   F      250             LCALL   ?C?ULCMP
+0021 4006            251             JC      ?C0001
+                     252     ;   return (0UL);
+                     253                             ; SOURCE LINE # 20
+0023 E4              254             CLR     A
+0024 FF              255             MOV     R7,A
+A51 MACRO ASSEMBLER  F_READ                                                               10/19/2005 09:24:03 PAGE     5
+
+0025 FE              256             MOV     R6,A
+0026 FD              257             MOV     R5,A
+0027 FC              258             MOV     R4,A
+0028 22              259             RET     
+0029                 260     ?C0001:
+                     261     ; 
+                     262     ; /*-------------------------------------
+                     263     ; Otherwise, read the starting page.
+                     264     ; --------------------------------------*/
+                     265     ; addr = (unsigned int) address;
+                     266                             ; SOURCE LINE # 25
+0029 850000   F      267             MOV     addr?045,address?042+02H
+002C 850000   F      268             MOV     addr?045+01H,address?042+03H
+                     269     ; 
+                     270     ; EADRL = addr >> 2;
+                     271                             ; SOURCE LINE # 27
+002F E500     F      272             MOV     A,addr?045+01H
+0031 AE00     F      273             MOV     R6,addr?045
+0033 7802            274             MOV     R0,#02H
+0035                 275     ?C0013:
+0035 CE              276             XCH     A,R6
+0036 C3              277             CLR     C
+0037 13              278             RRC     A
+0038 CE              279             XCH     A,R6
+0039 13              280             RRC     A
+003A D8F9            281             DJNZ    R0,?C0013
+003C F5C6            282             MOV     EADRL,A
+                     283     ; ECON = ADI_EE_READ_PAGE;
+                     284                             ; SOURCE LINE # 28
+003E 75B901          285             MOV     ECON,#01H
+                     286     ; 
+                     287     ; for (i = 0; i < len; i++)
+                     288                             ; SOURCE LINE # 30
+0041 E4              289             CLR     A
+0042 F500     F      290             MOV     i?044+03H,A
+0044 F500     F      291             MOV     i?044+02H,A
+0046 F500     F      292             MOV     i?044+01H,A
+0048 F500     F      293             MOV     i?044,A
+004A                 294     ?C0003:
+004A AF00     F      295             MOV     R7,len?041+03H
+004C AE00     F      296             MOV     R6,len?041+02H
+004E AD00     F      297             MOV     R5,len?041+01H
+0050 AC00     F      298             MOV     R4,len?041
+0052 AB00     F      299             MOV     R3,i?044+03H
+0054 AA00     F      300             MOV     R2,i?044+02H
+0056 A900     F      301             MOV     R1,i?044+01H
+0058 A800     F      302             MOV     R0,i?044
+005A C3              303             CLR     C
+005B 120000   F      304             LCALL   ?C?ULCMP
+005E 4003            305             JC      $ + 5H
+0060 020000   F      306             LJMP    ?C0004
+                     307     ;   {
+                     308                             ; SOURCE LINE # 31
+                     309     ; 
+                     310     ; /*-------------------------------------
+                     311     ; Read the appropriate EE byte.
+                     312     ; --------------------------------------*/
+                     313     ;   switch (addr & 0x03)
+                     314                             ; SOURCE LINE # 36
+0063 E500     F      315             MOV     A,addr?045+01H
+0065 5403            316             ANL     A,#03H
+0067 14              317             DEC     A
+0068 601A            318             JZ      ?C0008
+006A 14              319             DEC     A
+006B 6027            320             JZ      ?C0009
+006D 14              321             DEC     A
+A51 MACRO ASSEMBLER  F_READ                                                               10/19/2005 09:24:03 PAGE     6
+
+006E 6034            322             JZ      ?C0010
+0070 2403            323             ADD     A,#03H
+0072 7041            324             JNZ     ?C0006
+                     325     ;     {
+                     326                             ; SOURCE LINE # 37
+                     327     ;     case 0: s[i] = EDATA1; break;
+                     328                             ; SOURCE LINE # 38
+0074                 329     ?C0007:
+0074 AB00     F      330             MOV     R3,s?043
+0076 AA00     F      331             MOV     R2,s?043+01H
+0078 A900     F      332             MOV     R1,s?043+02H
+007A 850082   F      333             MOV     DPL,i?044+03H
+007D 850083   F      334             MOV     DPH,i?044+02H
+0080 E5BC            335             MOV     A,EDATA1
+0082 802E            336             SJMP    ?C0018
+                     337     ;     case 1: s[i] = EDATA2; break;
+                     338                             ; SOURCE LINE # 39
+0084                 339     ?C0008:
+0084 AB00     F      340             MOV     R3,s?043
+0086 AA00     F      341             MOV     R2,s?043+01H
+0088 A900     F      342             MOV     R1,s?043+02H
+008A 850082   F      343             MOV     DPL,i?044+03H
+008D 850083   F      344             MOV     DPH,i?044+02H
+0090 E5BD            345             MOV     A,EDATA2
+0092                 346     ?C0016:
+0092 801E            347             SJMP    ?C0018
+                     348     ;     case 2: s[i] = EDATA3; break;
+                     349                             ; SOURCE LINE # 40
+0094                 350     ?C0009:
+0094 AB00     F      351             MOV     R3,s?043
+0096 AA00     F      352             MOV     R2,s?043+01H
+0098 A900     F      353             MOV     R1,s?043+02H
+009A 850082   F      354             MOV     DPL,i?044+03H
+009D 850083   F      355             MOV     DPH,i?044+02H
+00A0 E5BE            356             MOV     A,EDATA3
+00A2                 357     ?C0017:
+00A2 800E            358             SJMP    ?C0018
+                     359     ;     case 3: s[i] = EDATA4; break;
+                     360                             ; SOURCE LINE # 41
+00A4                 361     ?C0010:
+00A4 AB00     F      362             MOV     R3,s?043
+00A6 AA00     F      363             MOV     R2,s?043+01H
+00A8 A900     F      364             MOV     R1,s?043+02H
+00AA 850082   F      365             MOV     DPL,i?044+03H
+00AD 850083   F      366             MOV     DPH,i?044+02H
+00B0 E5BF            367             MOV     A,EDATA4
+00B2                 368     ?C0018:
+00B2 120000   F      369             LCALL   ?C?CSTOPTR
+                     370     ;     }
+                     371                             ; SOURCE LINE # 42
+00B5                 372     ?C0006:
+                     373     ;   
+                     374     ; 
+                     375     ;   if (++addr >= ADI_EEMEM_SIZE)
+                     376                             ; SOURCE LINE # 45
+00B5 0500     F      377             INC     addr?045+01H
+00B7 E500     F      378             MOV     A,addr?045+01H
+00B9 7002            379             JNZ     ?C0014
+00BB 0500     F      380             INC     addr?045
+00BD                 381     ?C0014:
+00BD FF              382             MOV     R7,A
+00BE AE00     F      383             MOV     R6,addr?045
+00C0 E4              384             CLR     A
+00C1 FC              385             MOV     R4,A
+00C2 FD              386             MOV     R5,A
+00C3 7B80            387             MOV     R3,#080H
+A51 MACRO ASSEMBLER  F_READ                                                               10/19/2005 09:24:03 PAGE     7
+
+00C5 7A02            388             MOV     R2,#02H
+00C7 F9              389             MOV     R1,A
+00C8 F8              390             MOV     R0,A
+00C9 D3              391             SETB    C
+00CA 120000   F      392             LCALL   ?C?ULCMP
+00CD 4033            393             JC      ?C0004
+                     394     ;     break;
+                     395                             ; SOURCE LINE # 46
+00CF                 396     ?C0011:
+                     397     ; 
+                     398     ;   if ((addr & 0x03) == 0)
+                     399                             ; SOURCE LINE # 48
+00CF E500     F      400             MOV     A,addr?045+01H
+00D1 5403            401             ANL     A,#03H
+00D3 7012            402             JNZ     ?C0005
+                     403     ;     {
+                     404                             ; SOURCE LINE # 49
+                     405     ;     EADRL = addr >> 2;
+                     406                             ; SOURCE LINE # 50
+00D5 E500     F      407             MOV     A,addr?045+01H
+00D7 AE00     F      408             MOV     R6,addr?045
+00D9 7802            409             MOV     R0,#02H
+00DB                 410     ?C0015:
+00DB CE              411             XCH     A,R6
+00DC C3              412             CLR     C
+00DD 13              413             RRC     A
+00DE CE              414             XCH     A,R6
+00DF 13              415             RRC     A
+00E0 D8F9            416             DJNZ    R0,?C0015
+00E2 F5C6            417             MOV     EADRL,A
+                     418     ;     ECON = ADI_EE_READ_PAGE;
+                     419                             ; SOURCE LINE # 51
+00E4 75B901          420             MOV     ECON,#01H
+                     421     ;     }
+                     422                             ; SOURCE LINE # 52
+                     423     ;   }
+                     424                             ; SOURCE LINE # 53
+00E7                 425     ?C0005:
+00E7 E500     F      426             MOV     A,i?044+03H
+00E9 2401            427             ADD     A,#01H
+00EB FF              428             MOV     R7,A
+00EC E4              429             CLR     A
+00ED 3500     F      430             ADDC    A,i?044+02H
+00EF FE              431             MOV     R6,A
+00F0 E4              432             CLR     A
+00F1 3500     F      433             ADDC    A,i?044+01H
+00F3 FD              434             MOV     R5,A
+00F4 E4              435             CLR     A
+00F5 3500     F      436             ADDC    A,i?044
+00F7 8F00     F      437             MOV     i?044+03H,R7
+00F9 8E00     F      438             MOV     i?044+02H,R6
+00FB 8D00     F      439             MOV     i?044+01H,R5
+00FD F500     F      440             MOV     i?044,A
+00FF 020000   F      441             LJMP    ?C0003
+0102                 442     ?C0004:
+                     443     ; 
+                     444     ; return (i);
+                     445                             ; SOURCE LINE # 55
+0102 AF00     F      446             MOV     R7,i?044+03H
+0104 AE00     F      447             MOV     R6,i?044+02H
+0106 AD00     F      448             MOV     R5,i?044+01H
+0108 AC00     F      449             MOV     R4,i?044
+                     450     ; }
+                     451                             ; SOURCE LINE # 56
+010A                 452     ?C0002:
+010A 22              453             RET     
+A51 MACRO ASSEMBLER  F_READ                                                               10/19/2005 09:24:03 PAGE     8
+
+                     454     ; END OF _flash_read
+                     455     
+                     456             END
+A51 MACRO ASSEMBLER  F_READ                                                               10/19/2005 09:24:03 PAGE     9
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E                 T Y P E  V A L U E   ATTRIBUTES
+
+?C0001 . . . . . . . .  C ADDR   0029H   R   SEG=?PR?_FLASH_READ?F_READ
+?C0002 . . . . . . . .  C ADDR   010AH   R   SEG=?PR?_FLASH_READ?F_READ
+?C0003 . . . . . . . .  C ADDR   004AH   R   SEG=?PR?_FLASH_READ?F_READ
+?C0004 . . . . . . . .  C ADDR   0102H   R   SEG=?PR?_FLASH_READ?F_READ
+?C0005 . . . . . . . .  C ADDR   00E7H   R   SEG=?PR?_FLASH_READ?F_READ
+?C0006 . . . . . . . .  C ADDR   00B5H   R   SEG=?PR?_FLASH_READ?F_READ
+?C0007 . . . . . . . .  C ADDR   0074H   R   SEG=?PR?_FLASH_READ?F_READ
+?C0008 . . . . . . . .  C ADDR   0084H   R   SEG=?PR?_FLASH_READ?F_READ
+?C0009 . . . . . . . .  C ADDR   0094H   R   SEG=?PR?_FLASH_READ?F_READ
+?C0010 . . . . . . . .  C ADDR   00A4H   R   SEG=?PR?_FLASH_READ?F_READ
+?C0011 . . . . . . . .  C ADDR   00CFH   R   SEG=?PR?_FLASH_READ?F_READ
+?C0013 . . . . . . . .  C ADDR   0035H   R   SEG=?PR?_FLASH_READ?F_READ
+?C0014 . . . . . . . .  C ADDR   00BDH   R   SEG=?PR?_FLASH_READ?F_READ
+?C0015 . . . . . . . .  C ADDR   00DBH   R   SEG=?PR?_FLASH_READ?F_READ
+?C0016 . . . . . . . .  C ADDR   0092H   R   SEG=?PR?_FLASH_READ?F_READ
+?C0017 . . . . . . . .  C ADDR   00A2H   R   SEG=?PR?_FLASH_READ?F_READ
+?C0018 . . . . . . . .  C ADDR   00B2H   R   SEG=?PR?_FLASH_READ?F_READ
+?C?CSTOPTR . . . . . .  C ADDR   -----       EXT
+?C?ULCMP . . . . . . .  C ADDR   -----       EXT
+?DT?_FLASH_READ?F_READ  D SEG    0014H       REL=UNIT
+?PR?_FLASH_READ?F_READ  C SEG    010BH       REL=UNIT
+?_FLASH_READ?BYTE. . .  D ADDR   0000H   R   SEG=?DT?_FLASH_READ?F_READ
+AC . . . . . . . . . .  B ADDR   00D0H.6 A   
+ACC. . . . . . . . . .  D ADDR   00E0H   A   
+ADCCON1. . . . . . . .  D ADDR   00EFH   A   
+ADCCON2. . . . . . . .  D ADDR   00D8H   A   
+ADCCON3. . . . . . . .  D ADDR   00F5H   A   
+ADCDATAH . . . . . . .  D ADDR   00DAH   A   
+ADCDATAL . . . . . . .  D ADDR   00D9H   A   
+ADCGAINH . . . . . . .  D ADDR   00F4H   A   
+ADCGAINL . . . . . . .  D ADDR   00F3H   A   
+ADCI . . . . . . . . .  B ADDR   00D8H.7 A   
+ADCOFSH. . . . . . . .  D ADDR   00F2H   A   
+ADCOFSL. . . . . . . .  D ADDR   00F1H   A   
+ADDR?045 . . . . . . .  D ADDR   0012H   R   SEG=?DT?_FLASH_READ?F_READ
+ADDRESS?042. . . . . .  D ADDR   0007H   R   SEG=?DT?_FLASH_READ?F_READ
+B. . . . . . . . . . .  D ADDR   00F0H   A   
+BUFFER?040 . . . . . .  D ADDR   0001H   R   SEG=?DT?_FLASH_READ?F_READ
+CAP2 . . . . . . . . .  B ADDR   00C8H.0 A   
+CCONV. . . . . . . . .  B ADDR   00D8H.5 A   
+CFG842 . . . . . . . .  D ADDR   00AFH   A   
+CHIPID . . . . . . . .  D ADDR   00C2H   A   
+CNT2 . . . . . . . . .  B ADDR   00C8H.1 A   
+CPHA . . . . . . . . .  B ADDR   00F8H.2 A   
+CPOL . . . . . . . . .  B ADDR   00F8H.3 A   
+CS0. . . . . . . . . .  B ADDR   00D8H.0 A   
+CS1. . . . . . . . . .  B ADDR   00D8H.1 A   
+CS2. . . . . . . . . .  B ADDR   00D8H.2 A   
+CS3. . . . . . . . . .  B ADDR   00D8H.3 A   
+CY . . . . . . . . . .  B ADDR   00D0H.7 A   
+D0 . . . . . . . . . .  B ADDR   00E8H.5 A   
+D0EN . . . . . . . . .  B ADDR   00E8H.3 A   
+D1 . . . . . . . . . .  B ADDR   00E8H.7 A   
+D1EN . . . . . . . . .  B ADDR   00E8H.6 A   
+DAC0H. . . . . . . . .  D ADDR   00FAH   A   
+DAC0L. . . . . . . . .  D ADDR   00F9H   A   
+DAC1H. . . . . . . . .  D ADDR   00FCH   A   
+DAC1L. . . . . . . . .  D ADDR   00FBH   A   
+DACCON . . . . . . . .  D ADDR   00FDH   A   
+DCON . . . . . . . . .  D ADDR   00E8H   A   
+A51 MACRO ASSEMBLER  F_READ                                                               10/19/2005 09:24:03 PAGE    10
+
+DMA. . . . . . . . . .  B ADDR   00D8H.6 A   
+DMAH . . . . . . . . .  D ADDR   00D3H   A   
+DMAL . . . . . . . . .  D ADDR   00D2H   A   
+DMAP . . . . . . . . .  D ADDR   00D4H   A   
+DPCON. . . . . . . . .  D ADDR   00A7H   A   
+DPH. . . . . . . . . .  D ADDR   0083H   A   
+DPL. . . . . . . . . .  D ADDR   0082H   A   
+DPP. . . . . . . . . .  D ADDR   0084H   A   
+EA . . . . . . . . . .  B ADDR   00A8H.7 A   
+EADC . . . . . . . . .  B ADDR   00A8H.6 A   
+EADRH. . . . . . . . .  D ADDR   00C7H   A   
+EADRL. . . . . . . . .  D ADDR   00C6H   A   
+ECON . . . . . . . . .  D ADDR   00B9H   A   
+EDATA1 . . . . . . . .  D ADDR   00BCH   A   
+EDATA2 . . . . . . . .  D ADDR   00BDH   A   
+EDATA3 . . . . . . . .  D ADDR   00BEH   A   
+EDATA4 . . . . . . . .  D ADDR   00BFH   A   
+ES . . . . . . . . . .  B ADDR   00A8H.4 A   
+ET0. . . . . . . . . .  B ADDR   00A8H.1 A   
+ET1. . . . . . . . . .  B ADDR   00A8H.3 A   
+ET2. . . . . . . . . .  B ADDR   00A8H.5 A   
+EX0. . . . . . . . . .  B ADDR   00A8H.0 A   
+EX1. . . . . . . . . .  B ADDR   00A8H.2 A   
+EXEN2. . . . . . . . .  B ADDR   00C8H.3 A   
+EXF2 . . . . . . . . .  B ADDR   00C8H.6 A   
+F0 . . . . . . . . . .  B ADDR   00D0H.5 A   
+F1 . . . . . . . . . .  B ADDR   00D0H.1 A   
+F_READ . . . . . . . .  N NUMB   -----       
+HOUR . . . . . . . . .  D ADDR   00A5H   A   
+HTHSEC . . . . . . . .  D ADDR   00A2H   A   
+I2CADD . . . . . . . .  D ADDR   009BH   A   
+I2CADD1. . . . . . . .  D ADDR   0091H   A   
+I2CADD2. . . . . . . .  D ADDR   0092H   A   
+I2CADD3. . . . . . . .  D ADDR   0093H   A   
+I2CCON . . . . . . . .  D ADDR   00E8H   A   
+I2CDAT . . . . . . . .  D ADDR   009AH   A   
+I2CI . . . . . . . . .  B ADDR   00E8H.0 A   
+I2CM . . . . . . . . .  B ADDR   00E8H.3 A   
+I2CRS. . . . . . . . .  B ADDR   00E8H.2 A   
+I2CTX. . . . . . . . .  B ADDR   00E8H.1 A   
+I?044. . . . . . . . .  D ADDR   000EH   R   SEG=?DT?_FLASH_READ?F_READ
+IE . . . . . . . . . .  D ADDR   00A8H   A   
+IE0. . . . . . . . . .  B ADDR   0088H.1 A   
+IE1. . . . . . . . . .  B ADDR   0088H.3 A   
+IEIP2. . . . . . . . .  D ADDR   00A9H   A   
+INT0 . . . . . . . . .  B ADDR   00B0H.2 A   
+INT1 . . . . . . . . .  B ADDR   00B0H.3 A   
+INTVAL . . . . . . . .  D ADDR   00A6H   A   
+IP . . . . . . . . . .  D ADDR   00B8H   A   
+ISPI . . . . . . . . .  B ADDR   00F8H.7 A   
+IT0. . . . . . . . . .  B ADDR   0088H.0 A   
+IT1. . . . . . . . . .  B ADDR   0088H.2 A   
+LEN?041. . . . . . . .  D ADDR   0003H   R   SEG=?DT?_FLASH_READ?F_READ
+MCO. . . . . . . . . .  B ADDR   00E8H.5 A   
+MDE. . . . . . . . . .  B ADDR   00E8H.6 A   
+MDI. . . . . . . . . .  B ADDR   00E8H.4 A   
+MDO. . . . . . . . . .  B ADDR   00E8H.7 A   
+MIN. . . . . . . . . .  D ADDR   00A4H   A   
+OV . . . . . . . . . .  B ADDR   00D0H.2 A   
+P. . . . . . . . . . .  B ADDR   00D0H.0 A   
+P0 . . . . . . . . . .  D ADDR   0080H   A   
+P1 . . . . . . . . . .  D ADDR   0090H   A   
+P2 . . . . . . . . . .  D ADDR   00A0H   A   
+P3 . . . . . . . . . .  D ADDR   00B0H   A   
+PADC . . . . . . . . .  B ADDR   00B8H.6 A   
+PCON . . . . . . . . .  D ADDR   0087H   A   
+A51 MACRO ASSEMBLER  F_READ                                                               10/19/2005 09:24:03 PAGE    11
+
+PLLCON . . . . . . . .  D ADDR   00D7H   A   
+PRE0 . . . . . . . . .  B ADDR   00C0H.4 A   
+PRE1 . . . . . . . . .  B ADDR   00C0H.5 A   
+PRE2 . . . . . . . . .  B ADDR   00C0H.6 A   
+PRE3 . . . . . . . . .  B ADDR   00C0H.7 A   
+PS . . . . . . . . . .  B ADDR   00B8H.4 A   
+PSI. . . . . . . . . .  B ADDR   00B8H.7 A   
+PSMCON . . . . . . . .  D ADDR   00DFH   A   
+PSW. . . . . . . . . .  D ADDR   00D0H   A   
+PT0. . . . . . . . . .  B ADDR   00B8H.1 A   
+PT1. . . . . . . . . .  B ADDR   00B8H.3 A   
+PT2. . . . . . . . . .  B ADDR   00B8H.5 A   
+PWM0H. . . . . . . . .  D ADDR   00B2H   A   
+PWM0L. . . . . . . . .  D ADDR   00B1H   A   
+PWM1H. . . . . . . . .  D ADDR   00B4H   A   
+PWM1L. . . . . . . . .  D ADDR   00B3H   A   
+PWMCON . . . . . . . .  D ADDR   00AEH   A   
+PX0. . . . . . . . . .  B ADDR   00B8H.0 A   
+PX1. . . . . . . . . .  B ADDR   00B8H.2 A   
+RB8. . . . . . . . . .  B ADDR   0098H.2 A   
+RCAP2H . . . . . . . .  D ADDR   00CBH   A   
+RCAP2L . . . . . . . .  D ADDR   00CAH   A   
+RCLK . . . . . . . . .  B ADDR   00C8H.5 A   
+RD . . . . . . . . . .  B ADDR   00B0H.7 A   
+REN. . . . . . . . . .  B ADDR   0098H.4 A   
+RI . . . . . . . . . .  B ADDR   0098H.0 A   
+RS0. . . . . . . . . .  B ADDR   00D0H.3 A   
+RS1. . . . . . . . . .  B ADDR   00D0H.4 A   
+RXD. . . . . . . . . .  B ADDR   00B0H.0 A   
+S?043. . . . . . . . .  D ADDR   000BH   R   SEG=?DT?_FLASH_READ?F_READ
+SBUF . . . . . . . . .  D ADDR   0099H   A   
+SCON . . . . . . . . .  D ADDR   0098H   A   
+SCONV. . . . . . . . .  B ADDR   00D8H.4 A   
+SEC. . . . . . . . . .  D ADDR   00A3H   A   
+SM0. . . . . . . . . .  B ADDR   0098H.7 A   
+SM1. . . . . . . . . .  B ADDR   0098H.6 A   
+SM2. . . . . . . . . .  B ADDR   0098H.5 A   
+SP . . . . . . . . . .  D ADDR   0081H   A   
+SPE. . . . . . . . . .  B ADDR   00F8H.5 A   
+SPH. . . . . . . . . .  D ADDR   00B7H   A   
+SPICON . . . . . . . .  D ADDR   00F8H   A   
+SPIDAT . . . . . . . .  D ADDR   00F7H   A   
+SPIM . . . . . . . . .  B ADDR   00F8H.4 A   
+SPR0 . . . . . . . . .  B ADDR   00F8H.0 A   
+SPR1 . . . . . . . . .  B ADDR   00F8H.1 A   
+T0 . . . . . . . . . .  B ADDR   00B0H.4 A   
+T1 . . . . . . . . . .  B ADDR   00B0H.5 A   
+T2 . . . . . . . . . .  B ADDR   0090H.0 A   
+T2CON. . . . . . . . .  D ADDR   00C8H   A   
+T2EX . . . . . . . . .  B ADDR   0090H.1 A   
+T3CON. . . . . . . . .  D ADDR   009EH   A   
+T3FD . . . . . . . . .  D ADDR   009DH   A   
+TB8. . . . . . . . . .  B ADDR   0098H.3 A   
+TCLK . . . . . . . . .  B ADDR   00C8H.4 A   
+TCON . . . . . . . . .  D ADDR   0088H   A   
+TF0. . . . . . . . . .  B ADDR   0088H.5 A   
+TF1. . . . . . . . . .  B ADDR   0088H.7 A   
+TF2. . . . . . . . . .  B ADDR   00C8H.7 A   
+TH0. . . . . . . . . .  D ADDR   008CH   A   
+TH1. . . . . . . . . .  D ADDR   008DH   A   
+TH2. . . . . . . . . .  D ADDR   00CDH   A   
+TI . . . . . . . . . .  B ADDR   0098H.1 A   
+TIMECON. . . . . . . .  D ADDR   00A1H   A   
+TL0. . . . . . . . . .  D ADDR   008AH   A   
+TL1. . . . . . . . . .  D ADDR   008BH   A   
+TL2. . . . . . . . . .  D ADDR   00CCH   A   
+A51 MACRO ASSEMBLER  F_READ                                                               10/19/2005 09:24:03 PAGE    12
+
+TMOD . . . . . . . . .  D ADDR   0089H   A   
+TR0. . . . . . . . . .  B ADDR   0088H.4 A   
+TR1. . . . . . . . . .  B ADDR   0088H.6 A   
+TR2. . . . . . . . . .  B ADDR   00C8H.2 A   
+TXD. . . . . . . . . .  B ADDR   00B0H.1 A   
+WCOL . . . . . . . . .  B ADDR   00F8H.6 A   
+WDCON. . . . . . . . .  D ADDR   00C0H   A   
+WDE. . . . . . . . . .  B ADDR   00C0H.1 A   
+WDIR . . . . . . . . .  B ADDR   00C0H.3 A   
+WDS. . . . . . . . . .  B ADDR   00C0H.2 A   
+WDWR . . . . . . . . .  B ADDR   00C0H.0 A   
+WR . . . . . . . . . .  B ADDR   00B0H.6 A   
+_FLASH_READ. . . . . .  C ADDR   0000H   R   SEG=?PR?_FLASH_READ?F_READ
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
